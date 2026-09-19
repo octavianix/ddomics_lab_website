@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import bgResearch from "@/assets/bg-research.jpg";
-import { facilities, researchTracks } from "@/lib/lab-data";
+import { researchTracks } from "@/lib/lab-data";
 
 export const Route = createFileRoute("/research")({
   head: () => ({
@@ -24,25 +24,6 @@ export const Route = createFileRoute("/research")({
   component: ResearchPage,
 });
 
-const sections = [
-  {
-    to: "/research/domains" as const,
-    eyebrow: "01 / Domains",
-    title: "Research Domains",
-    body: "Five active tracks spanning population cohorts, early life, viral surveillance and disease — from the Indian Human Microbiome Initiative to the gut–brain axis.",
-    count: researchTracks.length,
-    countLabel: "active tracks",
-  },
-  {
-    to: "/research/facilities" as const,
-    eyebrow: "02 / Facilities",
-    title: "Facilities",
-    body: "The instruments and workflows behind the work: anaerobic culture and isolation, sequencing and genomics, and the in-house bioinformatics compute cluster.",
-    count: facilities.length,
-    countLabel: "core facilities",
-  },
-];
-
 function ResearchPage() {
   return (
     <>
@@ -59,36 +40,44 @@ function ResearchPage() {
         lede="Our work moves between the bench and the cluster: anaerobic culture and isolation on one side, metagenomic and metabolomic analysis on the other."
       />
 
-      <section className="bg-background">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {sections.map((s, i) => (
-              <Reveal key={s.to} delay={i * 90}>
-                <Link
-                  to={s.to}
-                  className="lift-card sheen group flex h-full flex-col border border-border bg-card p-10"
-                >
-                  <span className="eyebrow text-muted-foreground">
-                    {s.eyebrow}
-                  </span>
-                  <h2 className="display-title mt-4 text-2xl lg:text-3xl">
-                    {s.title}
-                  </h2>
-                  <p className="measure mt-4 flex-1 leading-relaxed text-muted-foreground">
-                    {s.body}
-                  </p>
-                  <p className="eyebrow mt-8 text-primary">
-                    {s.count} {s.countLabel}
-                  </p>
-                  <span className="eyebrow mt-6 text-foreground opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                    View {s.title} →
-                  </span>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        {researchTracks.map((t, i) => (
+          <Reveal
+            as="section"
+            key={t.code}
+            className="grid grid-cols-1 gap-8 border-b border-border py-10 lg:grid-cols-12 lg:items-center lg:py-14"
+          >
+            <div className="lg:col-span-4">
+              <div className="art-tile aspect-[4/3] w-full overflow-hidden border border-border">
+                <img
+                  src={t.image}
+                  alt=""
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="lg:col-span-8">
+              <span className="eyebrow text-muted-foreground">
+                {String(i + 1).padStart(2, "0")} / {t.code}
+              </span>
+              <h2 className="display-title mt-4 text-2xl lg:text-3xl">
+                {t.title}
+              </h2>
+              <p className="measure mt-4 leading-relaxed text-muted-foreground">
+                {t.summary}
+              </p>
+              <Link
+                to="/research/$trackSlug"
+                params={{ trackSlug: t.slug }}
+                className="eyebrow mt-6 inline-block text-primary"
+              >
+                Explore this work →
+              </Link>
+            </div>
+          </Reveal>
+        ))}
+      </div>
     </>
   );
 }
