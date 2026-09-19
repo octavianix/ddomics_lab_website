@@ -33,8 +33,8 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <>
-      {/* Hero — plain image, no overlaid text */}
-      <section className="hero-veil relative -mt-24 flex min-h-[32vh] items-center overflow-hidden text-deep-foreground">
+      {/* Hero — image with the mission text overlaid at the base */}
+      <section className="hero-veil relative -mt-24 flex min-h-[78vh] items-end overflow-hidden text-deep-foreground lg:min-h-[90vh]">
         <img
           src={heroBg}
           alt=""
@@ -47,11 +47,12 @@ function Home() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,var(--deep)_92%)]"
         />
-      </section>
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,var(--deep)_12%,color-mix(in_oklch,var(--deep)_75%,transparent)_46%,transparent_88%)]"
+        />
 
-      {/* Mission — directly beneath the hero image, no gap */}
-      <section className="relative overflow-hidden bg-ink text-ink-foreground">
-        <div className="relative mx-auto max-w-4xl px-6 pt-16 pb-16 text-center lg:pt-20 lg:pb-20">
+        <div className="relative mx-auto w-full max-w-4xl px-6 pt-24 pb-16 text-center lg:px-10 lg:pb-24">
           <Reveal delay={120}>
             <h1 className="display-title text-4xl leading-[1.15] sm:text-5xl lg:text-6xl">
               <em>The microbiome is an integral part of</em>
@@ -60,24 +61,24 @@ function Home() {
             </h1>
           </Reveal>
           <Reveal delay={200}>
-            <p className="measure mx-auto mt-8 text-[21.7px] leading-relaxed text-muted-foreground">
+            <p className="measure mx-auto mt-8 text-[21.7px] leading-relaxed text-deep-foreground/80">
               Human body harbors microbial cells in 1:1 proportion to human
-              cells and these microbes are involved in host activities
-              including metabolism, immune modulation and production of
-              antimicrobial agents. Imbalance in microbial communities
-              associated with the host has been observed in multiple diseases
-              as well as metabolic disorders.
+              cells and these microbes are involved in host activities including
+              metabolism, immune modulation and production of antimicrobial
+              agents. Imbalance in microbial communities associated with the
+              host has been observed in multiple diseases as well as metabolic
+              disorders.
             </p>
           </Reveal>
           <Reveal delay={280}>
-            <p className="measure mx-auto mt-6 text-[21.7px] leading-relaxed text-muted-foreground">
+            <p className="measure mx-auto mt-6 text-[21.7px] leading-relaxed text-deep-foreground/80">
               In the DDOmics Lab, we study microbial community structure and
-              function in human health and diseases using classic
-              microbiology techniques, next generation sequencing and
-              multi-omics data integration approach. Our areas of focus are
-              Microbiome of Indian healthy communities, Microbiome of gluten
-              spectrum disorders, Mother and infant microbiome, Gut-brain
-              axis, and Surveillance of SARS-CoV-2.
+              function in human health and diseases using classic microbiology
+              techniques, next generation sequencing and multi-omics data
+              integration approach. Our areas of focus are Microbiome of Indian
+              healthy communities, Microbiome of gluten spectrum disorders,
+              Mother and infant microbiome, Gut-brain axis, and Surveillance of
+              SARS-CoV-2.
             </p>
           </Reveal>
         </div>
