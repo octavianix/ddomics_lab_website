@@ -236,7 +236,7 @@ function PersonProfilePage() {
                     <Reveal
                       as="li"
                       key={e.role + e.place}
-                      delay={i * 70}
+                      delay={Math.min(i * 70, 400)}
                       className="group relative pb-8 last:pb-0"
                     >
                       <span
@@ -273,7 +273,7 @@ function PersonProfilePage() {
                         <Reveal
                           as="li"
                           key={e.degree}
-                          delay={i * 70}
+                          delay={Math.min(i * 70, 400)}
                           className="group relative pb-8 last:pb-0"
                         >
                           <span
@@ -337,7 +337,7 @@ function PersonProfilePage() {
             </Reveal>
             <ul className="divide-y divide-border border-t border-b border-border">
               {person.publications.map((p: PersonPublication, i: number) => (
-                <Reveal as="li" key={p.title} delay={i * 60} className="py-6">
+                <Reveal as="li" key={p.title} delay={Math.min(i * 60, 400)} className="py-6">
                   <a
                     href={p.doi ? `https://doi.org/${p.doi}` : undefined}
                     target={p.doi ? "_blank" : undefined}
