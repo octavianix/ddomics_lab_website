@@ -95,7 +95,7 @@ function AllPublicationsPage() {
                     <Reveal
                       as="li"
                       key={p.title}
-                      delay={i * 50}
+                      delay={Math.min(i * 50, 400)}
                       className="py-6"
                     >
                       <p className="leading-relaxed">
