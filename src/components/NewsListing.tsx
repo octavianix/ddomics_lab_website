@@ -52,7 +52,7 @@ export function NewsListing({
               <Reveal
                 as="article"
                 key={n.title}
-                delay={i * 70}
+                delay={Math.min(i * 70, 400)}
                 className="group flex flex-col"
               >
                 <div className="art-tile aspect-[4/3] w-full overflow-hidden border border-border bg-ink">
