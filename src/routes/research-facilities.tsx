@@ -43,7 +43,7 @@ function FacilitiesPage() {
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
             {facilities.map((f, i) => (
-              <Reveal key={f.title} delay={i * 90}>
+              <Reveal key={f.title} delay={Math.min(i * 90, 400)}>
                 {f.images.length > 1 ? (
                   <div className="mb-6 grid grid-cols-2 gap-2">
                     {f.images.map((src) => (
