@@ -94,7 +94,7 @@ function FeaturedPublicationsPage() {
 
           <div className="mt-14 flex flex-wrap justify-center gap-[20px]">
             {featuredPublications.map((p, i) => (
-              <Reveal key={p.title} delay={i * 80}>
+              <Reveal key={p.title} delay={Math.min(i * 80, 400)}>
                 <article className="group flex h-[647.219px] w-[377.828px] flex-col overflow-hidden border border-border bg-card">
                   <div className="art-tile aspect-[3/2] w-full shrink-0 overflow-hidden">
                     <img
