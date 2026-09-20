@@ -63,7 +63,8 @@ function ResearchPage() {
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {sections.map((s, i) => (
-              <Reveal key={s.to} delay={i * 90}>
+              <Reveal key={s.to} delay={Math.min(i * 90, 400)}>
+
                 <Link
                   to={s.to}
                   className="lift-card sheen group flex h-full flex-col border border-border bg-card p-10"

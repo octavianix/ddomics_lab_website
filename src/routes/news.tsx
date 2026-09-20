@@ -78,7 +78,7 @@ function NewsPage() {
                 (n) => n.category === s.category,
               ).length;
               return (
-                <Reveal key={s.to} delay={i * 80}>
+                <Reveal key={s.to} delay={Math.min(i * 80, 400)}>
                   <Link
                     to={s.to}
                     className="lift-card sheen group flex h-full flex-col border border-border bg-card p-10"
