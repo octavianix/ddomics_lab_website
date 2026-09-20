@@ -11,7 +11,15 @@ export function DomainsMarquee() {
   const items = [...researchTracks, ...researchTracks];
 
   return (
-    <div className="relative overflow-hidden py-4">
+    <div
+      className="relative overflow-hidden py-4"
+      style={{
+        maskImage:
+          "linear-gradient(to right, transparent, black 64px, black calc(100% - 64px), transparent)",
+        WebkitMaskImage:
+          "linear-gradient(to right, transparent, black 64px, black calc(100% - 64px), transparent)",
+      }}
+    >
       <div className="domains-marquee-track gap-[20px]">
         {items.map((t, i) => (
           <Link
