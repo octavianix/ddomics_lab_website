@@ -142,7 +142,7 @@ function PersonProfilePage() {
               </p>
 
               {person.quote && (
-                <blockquote className="mt-6 border-l-2 border-primary pl-4 font-display text-sm leading-relaxed text-muted-foreground italic">
+                <blockquote className="mt-6 font-display text-sm leading-relaxed text-muted-foreground italic">
                   “{person.quote}”
                 </blockquote>
               )}
@@ -197,7 +197,6 @@ function PersonProfilePage() {
           {/* Main content */}
           <div className="min-w-0 space-y-14 lg:space-y-16">
             <Reveal>
-              <p className="eyebrow mb-3 text-primary opacity-90">About</p>
               <h2 className="display-title text-2xl lg:text-3xl">
                 Biography
               </h2>
@@ -210,7 +209,6 @@ function PersonProfilePage() {
 
             {person.researchFocus && (
               <Reveal>
-                <p className="eyebrow mb-3 text-primary opacity-90">Focus</p>
                 <h2 className="display-title text-2xl lg:text-3xl">
                   Research Focus
                 </h2>
@@ -226,9 +224,6 @@ function PersonProfilePage() {
                 {person.experience && person.experience.length > 0 && (
                   <div>
                     <Reveal>
-                      <p className="eyebrow mb-3 text-primary opacity-90">
-                        Timeline
-                      </p>
                       <h2 className="display-title text-2xl lg:text-3xl">
                         Experience
                       </h2>
@@ -270,9 +265,6 @@ function PersonProfilePage() {
                     {person.education && person.education.length > 0 && (
                       <>
                         <Reveal>
-                          <p className="eyebrow mb-3 text-primary opacity-90">
-                            Background
-                          </p>
                           <h2 className="display-title text-2xl lg:text-3xl">
                             Education
                           </h2>
@@ -316,9 +308,6 @@ function PersonProfilePage() {
                         delay={120}
                         className={person.education?.length ? "mt-12" : ""}
                       >
-                        <p className="eyebrow mb-3 text-primary opacity-90">
-                          Recognition
-                        </p>
                         <h2 className="display-title text-2xl lg:text-3xl">
                           Awards &amp; Fellowships
                         </h2>
@@ -382,9 +371,6 @@ function PersonProfilePage() {
 
             {person.outsideLab && (
               <Reveal className="border-t border-border pt-14">
-                <p className="eyebrow mb-3 text-primary opacity-90">
-                  Beyond the Lab
-                </p>
                 <h2 className="display-title text-2xl lg:text-3xl">
                   Outside the Lab
                 </h2>

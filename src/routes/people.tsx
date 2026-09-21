@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { ImageMarquee } from "@/components/ImageMarquee";
 import { ProtectedImage } from "@/components/ProtectedImage";
@@ -94,6 +95,87 @@ function PersonCard({ p }: { p: Person }) {
   );
 }
 
+/**
+ * Alumni grid that only shows the first row by default — there are too many
+ * former members to dump on the page at once. Measures the actual rendered
+ * row height client-side (so it adapts to however many columns the current
+ * breakpoint shows) and clips to it until the visitor asks to see more.
+ */
+function AlumniGrid({ alumni }: { alumni: Person[] }) {
+  const [expanded, setExpanded] = useState(false);
+  const [collapsedHeight, setCollapsedHeight] = useState<number | null>(null);
+  const [hasOverflow, setHasOverflow] = useState(false);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const measure = () => {
+      const el = gridRef.current;
+      if (!el) return;
+      const items = Array.from(
+        el.querySelectorAll<HTMLElement>("[data-alumni-card]"),
+      );
+      const firstItem = items[0];
+      if (!firstItem) return;
+      const firstTop = firstItem.offsetTop;
+      let rowHeight = 0;
+      let itemsInFirstRow = 0;
+      for (const item of items) {
+        if (item.offsetTop !== firstTop) break;
+        rowHeight = Math.max(rowHeight, item.offsetHeight);
+        itemsInFirstRow += 1;
+      }
+      setCollapsedHeight(rowHeight);
+      setHasOverflow(itemsInFirstRow < items.length);
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [alumni.length]);
+
+  return (
+    <div>
+      <div
+        ref={gridRef}
+        className="grid grid-cols-1 gap-8 overflow-hidden transition-[max-height] duration-500 ease-out sm:grid-cols-2 lg:grid-cols-4"
+        style={
+          !expanded && collapsedHeight
+            ? { maxHeight: `${collapsedHeight}px` }
+            : undefined
+        }
+      >
+        {alumni.map((a, i) => (
+          <div data-alumni-card key={a.slug}>
+            <Reveal delay={(i % 4) * 80}>
+              <PersonCard p={a} />
+            </Reveal>
+          </div>
+        ))}
+      </div>
+      {hasOverflow && (
+        <div className="mt-10 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+            className="eyebrow sheen inline-flex items-center gap-2 border border-silver/50 px-6 py-3 tracking-[0.12em] uppercase transition-colors hover:border-silver"
+          >
+            {expanded ? "Show less" : "Show all alumni"}
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 20 20"
+              className={`h-3.5 w-3.5 fill-current transition-transform duration-300 ${
+                expanded ? "rotate-180" : ""
+              }`}
+            >
+              <path d="M5 7l5 5 5-5H5z" />
+            </svg>
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function PeoplePage() {
   return (
     <>
@@ -164,13 +246,7 @@ function PeoplePage() {
             <h2 className="display-title text-2xl sm:text-3xl">Alumni</h2>
             <hr className="silver-rule mt-5 mb-10" />
           </Reveal>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {alumni.map((a, i) => (
-              <Reveal key={a.slug} delay={(i % 4) * 80}>
-                <PersonCard p={a} />
-              </Reveal>
-            ))}
-          </div>
+          <AlumniGrid alumni={alumni} />
         </div>
       </section>
 
