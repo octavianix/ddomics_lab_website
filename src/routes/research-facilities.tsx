@@ -31,7 +31,6 @@ function FacilitiesPage() {
         image={bgResearch}
         focal="left"
         height="short"
-        eyebrow="Research / Facilities"
         title={
           <>
             Instruments <span className="silver-text">&amp; facilities</span>
