@@ -49,7 +49,6 @@ function JoinPage() {
       <PageHero
         image={bgJoin}
         focal="right"
-        eyebrow="Join the Lab"
         title={
           <>
             Let's <span className="silver-text">collaborate</span>
@@ -65,10 +64,7 @@ function JoinPage() {
             className="grid grid-cols-1 gap-6 border-b border-border py-14 lg:grid-cols-12"
           >
             <div className="lg:col-span-4">
-              <span className="eyebrow text-muted-foreground">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h2 className="display-title mt-3 text-2xl">{r.title}</h2>
+              <h2 className="display-title text-2xl">{r.title}</h2>
             </div>
             <p className="leading-relaxed text-muted-foreground lg:col-span-8">
               {r.body}
