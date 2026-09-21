@@ -87,7 +87,6 @@ function Home() {
       <section className="bg-surface">
         <div className="py-14 lg:py-20">
           <Reveal className="mx-auto mb-10 max-w-2xl px-6 text-center lg:px-10">
-            <p className="eyebrow mb-4 text-muted-foreground">Research</p>
             <h2 className="display-title text-3xl lg:text-[45.13px]">
               Our lab researches in the following domains
             </h2>
@@ -101,13 +100,13 @@ function Home() {
       <section className="border-t border-border bg-background">
         <div className="mx-auto max-w-6xl px-6 py-16 text-center lg:px-10 lg:py-20">
           <Reveal>
-            <p className="eyebrow mb-10 text-muted-foreground">
+            <h2 className="display-title text-2xl text-muted-foreground lg:text-3xl">
               Collaborators &amp; Funders
-            </p>
+            </h2>
           </Reveal>
           <Reveal
             delay={100}
-            className="flex flex-wrap items-center justify-center gap-x-16 gap-y-10"
+            className="mt-10 flex flex-wrap items-center justify-center gap-x-16 gap-y-10"
           >
             <img
               src={logoBmgf}
