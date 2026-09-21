@@ -27,7 +27,6 @@ export const Route = createFileRoute("/research/$trackSlug")({
   component: ResearchTrackPage,
   notFoundComponent: () => (
     <div className="mx-auto max-w-2xl px-6 py-32 text-center">
-      <p className="eyebrow mb-4 text-muted-foreground">Not found</p>
       <h1 className="display-title text-3xl">
         This research track isn't listed
       </h1>
@@ -50,7 +49,6 @@ function ResearchTrackPage() {
         image={track.image}
         focal="left"
         height="short"
-        eyebrow={`Research / ${track.code}`}
         title={track.title}
         lede={track.summary}
       />
