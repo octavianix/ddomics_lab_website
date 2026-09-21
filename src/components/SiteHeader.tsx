@@ -6,24 +6,10 @@ import labLogo from "@/assets/lab-logo-mark.png";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "border-b border-border bg-background/85 text-foreground backdrop-blur-md"
-          : "border-b border-transparent bg-transparent text-deep-foreground"
-      }`}
-    >
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0d1321] font-display text-white/60">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex h-24 items-center justify-between gap-6">
           {/* Logo slot — the lab logo is used only here, once, sitewide. */}
@@ -39,10 +25,10 @@ export function SiteHeader() {
               />
             </span>
             <span className="leading-none">
-              <span className="block font-display text-[11px] font-semibold tracking-[0.28em] opacity-60">
+              <span className="block font-display text-[11px] font-semibold tracking-[0.28em] text-primary opacity-90">
                 THE
               </span>
-              <span className="block font-display text-3xl font-bold tracking-tight text-current sm:text-4xl">
+              <span className="block font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 {lab.name}
               </span>
             </span>
@@ -92,14 +78,17 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav className="flex animate-fade-in flex-col gap-1 border-t border-border bg-background px-6 pb-6 lg:hidden">
+        <nav className="flex animate-fade-in flex-col gap-1 border-t border-white/10 bg-[#0d1321] px-6 pb-6 lg:hidden">
           {navMenu.map((item) => (
-            <div key={item.to} className="border-b border-border last:border-0">
+            <div
+              key={item.to}
+              className="border-b border-white/10 last:border-0"
+            >
               <div className="flex items-center justify-between">
                 <Link
                   to={item.to}
                   onClick={() => setOpen(false)}
-                  className="nav-item block flex-1 py-3 text-foreground/85"
+                  className="nav-item block flex-1 py-3 text-white/70"
                 >
                   {item.label}
                 </Link>
@@ -113,7 +102,7 @@ export function SiteHeader() {
                         v === item.label ? null : item.label,
                       )
                     }
-                    className="p-3 text-foreground/60"
+                    className="p-3 text-white/50"
                   >
                     <svg
                       viewBox="0 0 20 20"
@@ -137,7 +126,7 @@ export function SiteHeader() {
                         setOpen(false);
                         setMobileSubmenu(null);
                       }}
-                      className="nav-item py-2 text-sm text-foreground/70"
+                      className="nav-item py-2 text-sm text-white/60"
                     >
                       {sub.label}
                     </Link>
@@ -149,7 +138,7 @@ export function SiteHeader() {
           <Link
             to="/join"
             onClick={() => setOpen(false)}
-            className="nav-item block border-b border-border py-3 text-foreground/85 last:border-0"
+            className="nav-item block border-b border-white/10 py-3 text-white/70 last:border-0"
           >
             Join the Lab
           </Link>
@@ -229,14 +218,14 @@ function DesktopNavItem({ item }: { item: NavMenuItem }) {
             : "pointer-events-none -translate-y-2 opacity-0"
         }`}
       >
-        <div className="sheen border border-border bg-background/95 py-2 text-foreground shadow-xl backdrop-blur-md">
+        <div className="sheen border border-white/10 bg-[#0d1321]/95 py-2 text-white/70 shadow-xl backdrop-blur-md">
           {item.menu.map((sub) => (
             <Link
               key={sub.label}
               to={sub.to}
               {...(sub.hash ? { hash: sub.hash } : {})}
               onClick={() => setHovered(false)}
-              className="nav-item block px-5 py-3 opacity-80 transition-all duration-200 hover:bg-primary/10 hover:pl-6 hover:opacity-100"
+              className="nav-item block px-5 py-3 opacity-80 transition-all duration-200 hover:bg-primary/10 hover:pl-6 hover:text-white hover:opacity-100"
             >
               {sub.label}
             </Link>
