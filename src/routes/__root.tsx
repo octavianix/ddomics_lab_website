@@ -93,8 +93,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             "Microbiome research at the National Centre for Cell Science, Pune.",
         },
         { property: "og:type", content: "website" },
+        {
+          property: "og:image",
+          content: "https://suyash007-1.github.io/ddomics_lab_website/og-image.png",
+        },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:site", content: "@DDOmicsLab" },
+        {
+          name: "twitter:image",
+          content: "https://suyash007-1.github.io/ddomics_lab_website/og-image.png",
+        },
       ],
       links: [
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
