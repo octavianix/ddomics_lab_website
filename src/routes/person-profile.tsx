@@ -41,7 +41,6 @@ export const Route = createFileRoute("/people/$personId")({
   component: PersonProfilePage,
   notFoundComponent: () => (
     <div className="mx-auto max-w-2xl px-6 py-32 text-center">
-      <p className="eyebrow mb-4 text-muted-foreground">Not found</p>
       <h1 className="display-title text-3xl">This person isn't listed</h1>
       <Link
         to="/people"

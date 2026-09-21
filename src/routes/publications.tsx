@@ -32,7 +32,6 @@ export const Route = createFileRoute("/publications")({
 const sections = [
   {
     to: "/publications/featured" as const,
-    eyebrow: "01 / Featured",
     title: "Featured Publications",
     body: "A selection of the lab's studies, presented with abstracts and cover imagery.",
     count: featuredPublications.length,
@@ -40,7 +39,6 @@ const sections = [
   },
   {
     to: "/publications/all" as const,
-    eyebrow: "02 / Complete list",
     title: "All Publications",
     body: "The full, filterable list of peer-reviewed publications, grouped by research theme and year.",
     count: publications.length,
@@ -54,7 +52,6 @@ function PublicationsPage() {
       <PageHero
         image={bgPublications}
         height="short"
-        eyebrow="Publications"
         title={
           <>
             Papers from <span className="silver-text">the lab</span>
@@ -71,10 +68,7 @@ function PublicationsPage() {
                   to={s.to}
                   className="lift-card sheen group flex h-full flex-col border border-border bg-card p-10"
                 >
-                  <span className="eyebrow text-muted-foreground">
-                    {s.eyebrow}
-                  </span>
-                  <h2 className="display-title mt-4 text-2xl lg:text-3xl">
+                  <h2 className="display-title text-2xl lg:text-3xl">
                     {s.title}
                   </h2>
                   <p className="measure mt-4 flex-1 leading-relaxed text-muted-foreground">

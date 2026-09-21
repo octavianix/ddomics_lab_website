@@ -47,7 +47,6 @@ function FeaturedPublicationsPage() {
       <PageHero
         image={bgPublications}
         height="short"
-        eyebrow="Publications / Featured"
         title={
           <>
             Featured <span className="silver-text">studies</span>

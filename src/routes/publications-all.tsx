@@ -47,7 +47,6 @@ function AllPublicationsPage() {
       <PageHero
         image={bgPublications}
         height="short"
-        eyebrow="Publications / All"
         title={
           <>
             All <span className="silver-text">publications</span>
@@ -60,7 +59,7 @@ function AllPublicationsPage() {
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
           <Reveal className="mb-12 flex flex-wrap items-end justify-end gap-4">
             <label className="flex items-center gap-3 text-sm">
-              <span className="eyebrow text-muted-foreground">Year</span>
+              <span className="text-muted-foreground">Year</span>
               <select
                 value={String(year)}
                 onChange={(e) =>

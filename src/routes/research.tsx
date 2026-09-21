@@ -27,7 +27,6 @@ export const Route = createFileRoute("/research")({
 const sections = [
   {
     to: "/research/domains" as const,
-    eyebrow: "01 / Domains",
     title: "Research Domains",
     body: "Five active tracks spanning population cohorts, early life, viral surveillance and disease — from the Indian Human Microbiome Initiative to the gut–brain axis.",
     count: researchTracks.length,
@@ -35,7 +34,6 @@ const sections = [
   },
   {
     to: "/research/facilities" as const,
-    eyebrow: "02 / Facilities",
     title: "Facilities",
     body: "The instruments and workflows behind the work: anaerobic culture and isolation, sequencing and genomics, and the in-house bioinformatics compute cluster.",
     count: facilities.length,
@@ -49,7 +47,6 @@ function ResearchPage() {
       <PageHero
         image={bgResearch}
         focal="left"
-        eyebrow="Research"
         title={
           <>
             Mapping <span className="silver-text">microbial communities</span>{" "}
@@ -69,10 +66,7 @@ function ResearchPage() {
                   to={s.to}
                   className="lift-card sheen group flex h-full flex-col border border-border bg-card p-10"
                 >
-                  <span className="eyebrow text-muted-foreground">
-                    {s.eyebrow}
-                  </span>
-                  <h2 className="display-title mt-4 text-2xl lg:text-3xl">
+                  <h2 className="display-title text-2xl lg:text-3xl">
                     {s.title}
                   </h2>
                   <p className="measure mt-4 flex-1 leading-relaxed text-muted-foreground">
