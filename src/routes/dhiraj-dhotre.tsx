@@ -146,7 +146,6 @@ function PIPage() {
           {/* Main content */}
           <div className="min-w-0 space-y-14 lg:space-y-16">
             <Reveal>
-              <p className="eyebrow mb-3 text-primary opacity-90">About</p>
               <h2 className="display-title text-2xl lg:text-3xl">
                 Biography
               </h2>
@@ -159,9 +158,6 @@ function PIPage() {
             <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">
               <div>
                 <Reveal>
-                  <p className="eyebrow mb-3 text-primary opacity-90">
-                    Timeline
-                  </p>
                   <h2 className="display-title text-2xl lg:text-3xl">
                     Experience
                   </h2>
@@ -193,9 +189,6 @@ function PIPage() {
 
               <div>
                 <Reveal>
-                  <p className="eyebrow mb-3 text-primary opacity-90">
-                    Background
-                  </p>
                   <h2 className="display-title text-2xl lg:text-3xl">
                     Education
                   </h2>
@@ -225,9 +218,6 @@ function PIPage() {
                 </ol>
 
                 <Reveal delay={120} className="mt-12">
-                  <p className="eyebrow mb-3 text-primary opacity-90">
-                    Recognition
-                  </p>
                   <h2 className="display-title text-2xl lg:text-3xl">
                     Awards
                   </h2>
