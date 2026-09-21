@@ -35,7 +35,6 @@ function ResearchDomainsPage() {
         image={bgResearch}
         focal="left"
         height="short"
-        eyebrow="Research / Domains"
         title={
           <>
             Mapping <span className="silver-text">microbial communities</span>{" "}
@@ -61,9 +60,6 @@ function ResearchDomainsPage() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <span className="eyebrow text-muted-foreground">
-                {String(i + 1).padStart(2, "0")} / {t.code}
-              </span>
               <h2
                 id={t.code.replace(/[^a-z0-9]/gi, "").toLowerCase()}
                 className="display-title mt-4 text-2xl lg:text-3xl"
