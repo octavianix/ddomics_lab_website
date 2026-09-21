@@ -29,28 +29,24 @@ export const Route = createFileRoute("/news")({
 const sections = [
   {
     to: "/news/publications" as const,
-    eyebrow: "01",
     title: "Publications",
     body: "Alerts for new peer-reviewed papers as they come out of the lab.",
     category: "Publication" as const,
   },
   {
     to: "/news/career-notifications" as const,
-    eyebrow: "02",
     title: "Career Notifications",
     body: "Openings for positions and studentships in the lab.",
     category: "Career Notification" as const,
   },
   {
     to: "/news/announcements" as const,
-    eyebrow: "03",
     title: "Announcements",
     body: "Grants, awards, collaborations and other lab news.",
     category: "Announcements" as const,
   },
   {
     to: "/news/media" as const,
-    eyebrow: "04",
     title: "Media",
     body: "Press coverage and media mentions of the lab's work.",
     category: "Media" as const,
@@ -62,7 +58,6 @@ function NewsPage() {
     <>
       <PageHero
         image={heroBg}
-        eyebrow="Newsroom"
         title={
           <>
             <em>Latest</em> News <em>&amp;</em> Media
@@ -83,10 +78,7 @@ function NewsPage() {
                     to={s.to}
                     className="lift-card sheen group flex h-full flex-col border border-border bg-card p-10"
                   >
-                    <span className="eyebrow text-muted-foreground">
-                      {s.eyebrow}
-                    </span>
-                    <h2 className="display-title mt-4 text-2xl">{s.title}</h2>
+                    <h2 className="display-title text-2xl">{s.title}</h2>
                     <p className="measure mt-4 flex-1 leading-relaxed text-muted-foreground">
                       {s.body}
                     </p>
