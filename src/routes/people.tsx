@@ -95,12 +95,8 @@ function PersonCard({ p }: { p: Person }) {
   );
 }
 
-/**
- * Alumni grid that only shows the first row by default — there are too many
- * former members to dump on the page at once. Measures the actual rendered
- * row height client-side (so it adapts to however many columns the current
- * breakpoint shows) and clips to it until the visitor asks to see more.
- */
+// Alumni grid, collapsed to one row by default (measures rendered row
+// height client-side so it adapts to the current column count).
 function AlumniGrid({ alumni }: { alumni: Person[] }) {
   const [expanded, setExpanded] = useState(false);
   const [collapsedHeight, setCollapsedHeight] = useState<number | null>(null);
