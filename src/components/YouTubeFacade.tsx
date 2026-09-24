@@ -1,11 +1,6 @@
 import { useState } from "react";
 
-/**
- * Lightweight click-to-play YouTube embed: shows the thumbnail + a play
- * button first (no iframe cost on page load), and only mounts the real
- * YouTube iframe once the visitor clicks, so it plays right there on the
- * page instead of sending them to YouTube.
- */
+// Click-to-play YouTube embed: shows a thumbnail + play button, mounts the real iframe on click.
 export function YouTubeFacade({
   videoId,
   title,
