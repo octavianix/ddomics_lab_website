@@ -27,12 +27,8 @@ import photoDattatrayMongad from "@/assets/people/dattatray-mongad.jpg";
 import photoMadhumitaBhattacharya from "@/assets/people/madhumita-bhattacharya.jpg";
 import labGroupPhoto from "@/assets/lab-group.jpg";
 
-/** Candid lab-life photos for the scrolling gallery on the People page.
- *
- * Auto-discovered from src/assets/gallery — drop a new image file into that
- * folder (any name, jpg/jpeg/png/webp) and it will automatically appear in
- * the gallery on the next build. No code changes needed.
- */
+// Lab-life photos for the People page gallery. Drop a new file into
+// src/assets/gallery (jpg/jpeg/png/webp) to add it — no code change needed.
 const galleryModules = import.meta.glob<{ default: string }>(
   "../assets/gallery/*.{jpg,jpeg,png,webp}",
   { eager: true },
@@ -61,14 +57,9 @@ export const navLinks = [
   { to: "/dhiraj-dhotre", label: "Dr. Dhotre" },
 ] as const;
 
-/** Header navigation, including hover/tap dropdown menus.
- *
- * Each top-level item is a Link on its own (clicking the label goes to
- * `to`); items with a `menu` also show a dropdown of sub-links on hover
- * (desktop) or tap (mobile). Sub-links with a `hash` jump straight to the
- * matching `id="..."` on the target page — add or move an id and the menu
- * link follows it automatically.
- */
+// Header navigation. Top-level items link to `to`; a `menu` adds a dropdown
+// of sub-links (hover on desktop, tap on mobile). A sub-link's `hash` jumps
+// to the matching id="..." on the target page.
 export type NavSubLink = { label: string; to: string; hash?: string };
 export type NavMenuItem = { label: string; to: string; menu?: NavSubLink[] };
 
@@ -150,11 +141,8 @@ export const methods = [
   },
 ];
 
-/** Facilities, shown on their own page at /research/facilities.
- * EDIT ME — swap in the lab's actual instrument/facility photos whenever
- * they're ready; the images below are the lab's existing art assets used
- * as stand-ins so each facility has something to show meanwhile.
- */
+// Facilities, shown at /research/facilities. Swap in real instrument photos
+// when available — currently using existing art assets as placeholders.
 export const facilities = [
   {
     title: "Anaerobic Workstation",
@@ -1141,12 +1129,9 @@ export type PersonPublication = {
   doi?: string;
 };
 
-/** All fields below `bio` are optional and used to build out a richer
- * /people/$personId page (education, prior roles, awards, selected
- * publications, hobbies, a personal quote, a CV link). Fill in whichever
- * a person has sent in — the profile page only renders the sections that
- * are present, so a bare-minimum entry (slug/name/role/group) still works.
- */
+// Fields below `bio` are optional and build out the /people/$personId page
+// (education, prior roles, awards, publications, quote, CV). A bare-minimum
+// entry (slug/name/role/group) still works if the rest aren't filled in.
 export type Person = {
   slug: string;
   name: string;
@@ -1165,20 +1150,15 @@ export type Person = {
   outsideLab?: string;
   quote?: string;
   cvUrl?: string;
-  /** No profile submitted yet — show name/photo only on the People page,
-   * not clickable through to a (mostly empty) profile page. */
+  // No profile submitted yet — show name/photo only, not linked to a profile page.
   noProfilePage?: boolean;
 };
 
-/** A few lines shown beside the photo card for groups that currently have
- * only one member (PI, Scientists) — otherwise that row of the People page
- * is mostly empty space. EDIT ME freely; the PI text below is a separate
- * copy of `pi.about` so editing one doesn't change the other, and the
- * Niraj Rane text is placeholder copy pending his own bio.
- */
+// Lines shown beside the photo card for groups with only one member (PI,
+// Scientists). The PI text is a separate copy of `pi.about`. The scientist
+// text is a placeholder pending Dr. Niraj Rane's own bio.
 export const groupBlurbs: Record<string, string> = {
   pi: "Dr. Dhiraj Dhotre is a bioinformatician with a research interest in the human microbiome. His lab investigates the role of the human microbiome in health and disease using genomics, metabolomics and culturomics approaches. He believes it is crucial to study the taxonomic, functional and metabolic structure of the microbiome to understand the true potential and consequences of alterations within it. His group generates high-throughput sequencing data and combines computational analyses of multi-dimensional omics data with molecular and in-vivo experimentation to understand the potential of the human microbiome in diagnostics and therapeutics.",
-  // EDIT ME — placeholder bio for Dr. Niraj Rane, pending his own text.
   scientist:
     "Dr. Niraj Rane works on the lab's project-scale genomics and sequencing efforts, helping coordinate sample processing, data generation and analysis across the group's ongoing microbiome studies.",
 };
