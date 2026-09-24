@@ -1,12 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { researchTracks } from "@/lib/lab-data";
 
-/** Infinite sliding ribbon of research domains — full-bleed image on top,
- * title + a short summary line + a "Read More" button in a padded panel
- * below, each card linking straight to its dedicated research page. Mirrors
- * ImageMarquee's motion so it reads as the same pattern used for the
- * lab-life photo ribbon. Not capped at a fixed count — however many tracks
- * exist in researchTracks, they all appear here. */
+// Infinite sliding ribbon of research domain cards, linking to each research page.
 export function DomainsMarquee() {
   const items = [...researchTracks, ...researchTracks];
 
