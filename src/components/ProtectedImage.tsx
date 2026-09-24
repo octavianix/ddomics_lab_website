@@ -1,13 +1,6 @@
 import type { ImgHTMLAttributes } from "react";
 
-/**
- * Drop-in replacement for <img> used for people's photos.
- *
- * This is a deterrent, not real DRM — a determined visitor can still get
- * the image via devtools or a screenshot. It just removes the easy paths
- * (right-click "Save image as", drag-to-desktop, long-press-to-save on
- * mobile) via a transparent slide sitting on top of the actual <img>.
- */
+// <img> replacement for people's photos; blocks right-click-save and drag via an overlay (not real DRM).
 export function ProtectedImage({
   className = "",
   ...imgProps
