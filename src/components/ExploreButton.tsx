@@ -1,14 +1,6 @@
 import { useEffect, useState } from "react";
 
-/**
- * Floating "Explore" affordance shown on every page (mounted once in the
- * root layout). Many visitors don't realise the hero is followed by more
- * content, so this jumps straight past the fold to <main id="main-content">
- * instead of relying on them to discover it by scrolling.
- *
- * Hides itself once the visitor has scrolled past the first screen, since
- * at that point they've already found the content it points to.
- */
+// Floating "Explore" button on every page; scrolls past the hero to #main-content, hides after first screen.
 export function ExploreButton() {
   const [visible, setVisible] = useState(true);
 
@@ -23,8 +15,6 @@ export function ExploreButton() {
   const handleClick = () => {
     const main = document.getElementById("main-content");
     if (!main) return;
-    // Skip past the current hero section to whatever follows it, so the
-    // jump always lands on "more content" rather than back at the top.
     const heroHeight =
       (main.firstElementChild as HTMLElement | null)?.offsetHeight ?? 0;
     window.scrollTo({ top: heroHeight - 96, behavior: "smooth" });
