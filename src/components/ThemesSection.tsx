@@ -14,24 +14,25 @@ const LABELS = [
 const IMAGES: (string | undefined)[] = [undefined, undefined, undefined];
 
 // Circular photo + card for each of the lab's three working methods.
-// Dimensions match the reference "Themes in our work" layout: a 316px
-// round portrait overlapping the top of its card, on a solid navy banner.
+// Card is fixed at 424 x 544.88 with 25.437px padding on every side,
+// matching the reference "Themes in our work" layout; the 316px round
+// portrait overlaps the top of the card, on a solid navy banner.
 export function ThemesSection() {
   return (
     <section className="border-b border-border bg-[#13233E] text-white">
-      <div className="mx-auto max-w-5xl px-6 py-16 lg:py-20">
+      <div className="mx-auto max-w-[1440px] px-6 py-16 lg:py-20">
         <Reveal>
           <h2 className="display-title text-center text-[32px] lg:text-[50px]">
             Themes in our work:
           </h2>
         </Reveal>
 
-        <div className="mt-20 grid grid-cols-1 gap-16 sm:grid-cols-3 sm:gap-8">
+        <div className="mt-20 flex flex-wrap justify-center gap-8">
           {methods.map((m, i) => (
             <Reveal
               key={m.title}
               delay={i * 100}
-              className="flex flex-col items-center text-center"
+              className="flex w-[424px] max-w-full flex-col items-center text-center"
             >
               <div className="fluid-overlay-navy relative z-10 -mb-16 h-[316px] w-[316px] shrink-0 overflow-hidden rounded-full ring-1 ring-white/20">
                 {IMAGES[i] ? (
@@ -48,7 +49,7 @@ export function ThemesSection() {
                   </div>
                 )}
               </div>
-              <div className="flex w-full max-w-[424px] flex-1 flex-col bg-card px-[25px] pt-[89px] pb-[25px] text-foreground">
+              <div className="flex h-[544.88px] w-[424px] max-w-full flex-col bg-card p-[25.437px] pt-[89px] text-foreground">
                 <h3 className="display-title my-10 text-[30px] leading-snug uppercase">
                   <span className="bg-primary/15 px-1">{LABELS[i]}</span>
                 </h3>
