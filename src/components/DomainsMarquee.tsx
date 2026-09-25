@@ -15,7 +15,7 @@ export function DomainsMarquee() {
             params={{ trackSlug: t.slug }}
             className="lift-card sheen group flex h-[647.219px] w-[377.828px] shrink-0 flex-col overflow-hidden border border-border bg-card"
           >
-            <div className="art-tile aspect-[3/2] w-full shrink-0 overflow-hidden">
+            <div className="art-tile fluid-overlay aspect-[3/2] w-full shrink-0 overflow-hidden">
               <img
                 src={t.image}
                 alt=""
