@@ -21,7 +21,7 @@ export function ThemesSection() {
     <section className="border-b border-border bg-ink text-ink-foreground">
       <div className="mx-auto max-w-5xl px-6 py-16 lg:py-20">
         <Reveal>
-          <h2 className="display-title text-center text-3xl lg:text-[45.13px]">
+          <h2 className="display-title text-center text-3xl lg:text-[50.02px]">
             Themes in our work
           </h2>
         </Reveal>
