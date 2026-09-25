@@ -13,8 +13,9 @@ const STRIP_SLUGS = [
 ] as const;
 
 // Renders the exact same PersonCard used on the People page (identical
-// photo size, font and hover states), in a 5-column grid sized to fill the
-// full content width — same container width as the People page itself.
+// photo size, font and hover states), in a 5-column grid with no max-width
+// cap so the row fills the full browser width edge to edge, not just the
+// site's usual reading-width container.
 export function TeamMarquee() {
   const bySlug = new Map(people.map((p) => [p.slug, p]));
   const items = STRIP_SLUGS.map((slug) => bySlug.get(slug)).filter(
@@ -22,7 +23,7 @@ export function TeamMarquee() {
   );
 
   return (
-    <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 sm:grid-cols-3 lg:grid-cols-5 lg:px-10">
+    <div className="grid w-full grid-cols-2 gap-6 px-6 sm:grid-cols-3 lg:grid-cols-5 lg:gap-8 lg:px-10">
       {items.map((p) => (
         <PersonCard key={p.slug} p={p} />
       ))}
