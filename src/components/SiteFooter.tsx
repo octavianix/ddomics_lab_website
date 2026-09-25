@@ -12,19 +12,19 @@ export function SiteFooter() {
               <p className="display-title mb-5 text-[30.014px] font-bold text-primary">
                 Contact
               </p>
-              <p className="text-[21.6752px] leading-relaxed font-bold text-white">
+              <p className="text-[22.0028px] leading-relaxed font-bold text-white">
                 Dr. Dhiraj S. Dhotre, Scientist 'E'
               </p>
-              <p className="mt-5 text-[21.6752px] leading-relaxed">
+              <p className="mt-5 text-[22.0028px] leading-relaxed">
                 Lab 3, Old Building
               </p>
-              <p className="mt-5 text-[21.6752px] leading-relaxed">
+              <p className="mt-5 text-[22.0028px] leading-relaxed">
                 NCCS, SPPU Campus
               </p>
-              <p className="mt-5 text-[21.6752px] leading-relaxed">
+              <p className="mt-5 text-[22.0028px] leading-relaxed">
                 Pune 411007
               </p>
-              <p className="mt-5 text-[21.6752px] leading-relaxed">
+              <p className="mt-5 text-[22.0028px] leading-relaxed">
                 <a
                   href={`mailto:${lab.email}`}
                   className="inline-flex items-center gap-2 transition-colors hover:text-white"
@@ -44,7 +44,7 @@ export function SiteFooter() {
                 Quick Links
               </p>
               <div className="flex items-start justify-between gap-16">
-                <ul className="space-y-5 text-[21.6752px]">
+                <ul className="space-y-5 text-[22.0028px]">
                   {navLinks.slice(0, 3).map((l) => (
                     <li key={l.to}>
                       <Link
@@ -56,7 +56,7 @@ export function SiteFooter() {
                     </li>
                   ))}
                 </ul>
-                <ul className="space-y-5 text-[21.6752px]">
+                <ul className="space-y-5 text-[22.0028px]">
                   {navLinks.slice(3).map((l) => (
                     <li key={l.to}>
                       <Link
@@ -91,7 +91,7 @@ export function SiteFooter() {
           <p className="display-title mb-5 text-[30.014px] font-bold text-primary">
             Funded By
           </p>
-          <ul className="space-y-3 text-[21.6752px] leading-relaxed">
+          <ul className="space-y-3 text-[22.0028px] leading-relaxed">
             <li>Department of Biotechnology</li>
             <li>Department of Science &amp; Technology</li>
             <li>Science &amp; Engineering Research Board, New Delhi</li>
