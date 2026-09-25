@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { DomainsMarquee } from "@/components/DomainsMarquee";
+import { TeamMarquee } from "@/components/TeamMarquee";
 import heroBg from "@/assets/microbiome-heads.png";
 import logoBmgf from "@/assets/collaborators/bmgf.png";
 import logoDst from "@/assets/collaborators/dst.png";
@@ -59,27 +60,39 @@ function Home() {
               <span className="silver-text">Human Health</span>
             </h1>
           </Reveal>
-          <Reveal delay={200}>
-            <p className="measure mx-auto mt-8 text-[21.7px] leading-relaxed text-muted-foreground">
-              Human body harbors microbial cells in 1:1 proportion to human
-              cells and these microbes are involved in host activities
-              including metabolism, immune modulation and production of
-              antimicrobial agents. Imbalance in microbial communities
-              associated with the host has been observed in multiple diseases
-              as well as metabolic disorders.
-            </p>
-          </Reveal>
-          <Reveal delay={280}>
-            <p className="measure mx-auto mt-6 text-[21.7px] leading-relaxed text-muted-foreground">
-              In the DDOmics Lab, we study microbial community structure and
-              function in human health and diseases using classic
-              microbiology techniques, next generation sequencing and
-              multi-omics data integration approach. Our areas of focus are
-              Microbiome of Indian healthy communities, Microbiome of gluten
-              spectrum disorders, Mother and infant microbiome, Gut-brain
-              axis, and Surveillance of SARS-CoV-2.
-            </p>
-          </Reveal>
+        </div>
+      </section>
+
+      {/* Mission paragraphs — each half-width, alternating sides */}
+      <section className="bg-ink text-ink-foreground">
+        <div className="mx-auto max-w-5xl px-6 pb-16 text-left lg:pb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10">
+            <div aria-hidden="true" className="hidden md:block" />
+            <Reveal delay={200}>
+              <p className="text-justify text-[21.7px] leading-relaxed text-muted-foreground">
+                Human body harbors microbial cells in 1:1 proportion to human
+                cells and these microbes are involved in host activities
+                including metabolism, immune modulation and production of
+                antimicrobial agents. Imbalance in microbial communities
+                associated with the host has been observed in multiple
+                diseases as well as metabolic disorders.
+              </p>
+            </Reveal>
+          </div>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 md:gap-10">
+            <Reveal delay={280}>
+              <p className="text-justify text-[21.7px] leading-relaxed text-muted-foreground">
+                In the DDOmics Lab, we study microbial community structure
+                and function in human health and diseases using classic
+                microbiology techniques, next generation sequencing and
+                multi-omics data integration approach. Our areas of focus are
+                Microbiome of Indian healthy communities, Microbiome of
+                gluten spectrum disorders, Mother and infant microbiome,
+                Gut-brain axis, and Surveillance of SARS-CoV-2.
+              </p>
+            </Reveal>
+            <div aria-hidden="true" className="hidden md:block" />
+          </div>
         </div>
       </section>
 
@@ -93,6 +106,31 @@ function Home() {
           </Reveal>
 
           <DomainsMarquee />
+        </div>
+      </section>
+
+      {/* People behind it */}
+      <section className="bg-background">
+        <div className="py-14 lg:py-20">
+          <Reveal className="mx-auto mb-10 max-w-2xl px-6 text-center lg:px-10">
+            <h2 className="display-title text-3xl lg:text-[45.13px]">
+              The people behind it
+            </h2>
+          </Reveal>
+
+          <TeamMarquee />
+
+          <Reveal
+            delay={100}
+            className="mt-10 flex justify-center px-6"
+          >
+            <Link
+              to="/people"
+              className="eyebrow sheen inline-flex items-center gap-2 border border-primary px-6 py-3 tracking-[0.12em] text-primary uppercase transition-colors hover:bg-primary hover:text-primary-foreground"
+            >
+              Meet the team
+            </Link>
+          </Reveal>
         </div>
       </section>
 
