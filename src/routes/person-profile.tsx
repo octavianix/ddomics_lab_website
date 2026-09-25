@@ -15,13 +15,8 @@ import iconX from "@/assets/social/x.png";
 import iconGithub from "@/assets/social/github.png";
 import iconScholar from "@/assets/social/scholar.png";
 
-// TEMPORARY: profile pages are disabled site-wide except Dr. Dhiraj Dhotre's.
-// To revert, delete this constant and the `if` block below that uses it.
-const TEMP_ONLY_ALLOWED_SLUG = "dhiraj-dhotre";
-
 export const Route = createFileRoute("/people/$personId")({
   loader: ({ params }) => {
-    if (params.personId !== TEMP_ONLY_ALLOWED_SLUG) throw notFound();
     const person = [...people, ...alumni].find(
       (p) => p.slug === params.personId,
     );
