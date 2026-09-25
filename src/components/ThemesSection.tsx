@@ -13,16 +13,16 @@ const LABELS = [
 // this file and put it in the matching slot here.
 const IMAGES: (string | undefined)[] = [undefined, undefined, undefined];
 
-// Circular photo + card for each of the lab's three working methods,
-// styled after the reference "Themes in our work" layout: a ~180px round
-// portrait overlapping the top edge of its card.
+// Circular photo + card for each of the lab's three working methods.
+// Dimensions match the reference "Themes in our work" layout: a 316px
+// round portrait overlapping the top of its card, on a solid navy banner.
 export function ThemesSection() {
   return (
-    <section className="border-b border-border bg-ink text-ink-foreground">
+    <section className="border-b border-border bg-[#13233E] text-white">
       <div className="mx-auto max-w-5xl px-6 py-16 lg:py-20">
         <Reveal>
-          <h2 className="display-title text-center text-3xl lg:text-[50.02px]">
-            Themes in our work
+          <h2 className="display-title text-center text-[32px] lg:text-[50px]">
+            Themes in our work:
           </h2>
         </Reveal>
 
@@ -33,7 +33,7 @@ export function ThemesSection() {
               delay={i * 100}
               className="flex flex-col items-center text-center"
             >
-              <div className="fluid-overlay relative z-10 -mb-[90px] h-[180px] w-[180px] shrink-0 overflow-hidden rounded-full ring-1 ring-silver/30">
+              <div className="fluid-overlay-navy relative z-10 -mb-16 h-[316px] w-[316px] shrink-0 overflow-hidden rounded-full ring-1 ring-white/20">
                 {IMAGES[i] ? (
                   <img
                     src={IMAGES[i]}
@@ -48,11 +48,11 @@ export function ThemesSection() {
                   </div>
                 )}
               </div>
-              <div className="flex w-full flex-1 flex-col border border-border bg-card px-6 pt-24 pb-8">
-                <h3 className="display-title text-lg leading-snug uppercase">
+              <div className="flex w-full max-w-[424px] flex-1 flex-col bg-card px-[25px] pt-[89px] pb-[25px] text-foreground">
+                <h3 className="display-title my-10 text-[30px] leading-snug uppercase">
                   <span className="bg-primary/15 px-1">{LABELS[i]}</span>
                 </h3>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-5 text-[22px] leading-relaxed text-muted-foreground">
                   {m.body}
                 </p>
               </div>
