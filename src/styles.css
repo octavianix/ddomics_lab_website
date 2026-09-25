@@ -460,6 +460,25 @@
   box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--primary) 45%, transparent);
 }
 
+/* Fluid image overlay: a soft brand-color wash that fades in over a photo
+ * on hover, mirroring the tinted-circle treatment used across the site's
+ * people and theme portraits. Add alongside overflow-hidden + rounded-*. */
+@utility fluid-overlay {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: color-mix(in oklab, var(--primary) 55%, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  &:hover::after,
+  .group:hover &::after {
+    opacity: 0.32;
+  }
+}
+
 @keyframes float-soft {
   0%,
   100% {

@@ -45,7 +45,7 @@ function initials(name: string) {
 function PersonCard({ p }: { p: Person }) {
   const card = (
     <>
-      <div className="relative flex aspect-square w-36 items-center justify-center overflow-hidden rounded-full bg-muted ring-1 ring-silver/30 transition-all duration-500 group-hover:ring-primary">
+      <div className="relative flex aspect-square w-36 items-center justify-center overflow-hidden rounded-full bg-muted ring-1 ring-silver/30 transition-all duration-500 group-hover:ring-primary fluid-overlay">
         {p.photo ? (
           <ProtectedImage
             src={p.photo}
