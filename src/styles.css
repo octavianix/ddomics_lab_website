@@ -479,6 +479,24 @@
   }
 }
 
+/* Navy variant used on the homepage Themes section, matching the
+ * reference design's #13233E fluid-image overlay tint. */
+@utility fluid-overlay-navy {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #13233e;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  &:hover::after,
+  .group:hover &::after {
+    opacity: 0.5;
+  }
+}
+
 @keyframes float-soft {
   0%,
   100% {
