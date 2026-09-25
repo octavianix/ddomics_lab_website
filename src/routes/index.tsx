@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { DomainsMarquee } from "@/components/DomainsMarquee";
 import { TeamMarquee } from "@/components/TeamMarquee";
+import { ThemesSection } from "@/components/ThemesSection";
 import heroBg from "@/assets/microbiome-heads.png";
 import logoBmgf from "@/assets/collaborators/bmgf.png";
 import logoDst from "@/assets/collaborators/dst.png";
@@ -79,7 +80,7 @@ function Home() {
               </p>
             </Reveal>
           </div>
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 md:gap-10">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:mt-20">
             <Reveal delay={280}>
               <p className="text-justify text-[21.7px] leading-relaxed text-muted-foreground">
                 In the DDOmics Lab, we study microbial community structure
@@ -95,6 +96,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <ThemesSection />
 
       {/* Research preview */}
       <section className="bg-surface">
