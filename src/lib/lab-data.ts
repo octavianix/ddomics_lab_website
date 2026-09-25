@@ -1405,6 +1405,7 @@ export const people: Person[] = [
     awards: [
       "GATE Life Science (2022)",
       "GATE Biotechnology (2022)",
+      "UGC NET JRF (2022) - All India Rank - 100", 
       "WBSET (2022)",
       "Rank Holder, University of Madras (2020)",
     ],
