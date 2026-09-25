@@ -2,8 +2,6 @@ import { PersonCard } from "@/components/PersonCard";
 import { people, type Person } from "@/lib/lab-data";
 
 // Fixed order for the homepage team strip (not the full People page order).
-// Puja Ghosh currently has no `photo` on her lab-data.ts entry — restore her
-// photo import there so her card isn't the initials fallback.
 const STRIP_SLUGS = [
   "dhiraj-dhotre",
   "niraj-rane",
