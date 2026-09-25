@@ -3,6 +3,7 @@ import { Reveal } from "@/components/Reveal";
 import { DomainsMarquee } from "@/components/DomainsMarquee";
 import { TeamMarquee } from "@/components/TeamMarquee";
 import { ThemesSection } from "@/components/ThemesSection";
+import { JoinCta } from "@/components/JoinCta";
 import heroBg from "@/assets/microbiome-heads.png";
 import logoBmgf from "@/assets/collaborators/bmgf.png";
 import logoDst from "@/assets/collaborators/dst.png";
@@ -172,6 +173,8 @@ function Home() {
           </Reveal>
         </div>
       </section>
+
+      <JoinCta />
     </>
   );
 }
