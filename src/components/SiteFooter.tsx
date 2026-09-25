@@ -106,7 +106,7 @@ export function SiteFooter() {
             reserved.
           </p>
           <a
-            href="https://github.com/oktavianos"
+            href="https://github.com/octavianix"
             target="_blank"
             rel="noreferrer"
             className="sheen inline-flex items-center gap-2 border border-white/20 px-3 py-1.5 font-mono text-[12px] opacity-80 transition-all hover:border-white/40 hover:opacity-100"
