@@ -14,20 +14,20 @@ export function JoinCta() {
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-[#13233E]/75" />
-      <div className="relative mx-auto max-w-4xl px-6 py-24 text-center text-white lg:py-32">
+      <div className="relative mx-auto max-w-4xl px-6 py-16 text-center text-white sm:py-20 lg:py-32">
         <Reveal>
-          <h2 className="display-title text-[32px] leading-tight lg:text-[50px]">
+          <h2 className="display-title text-[26px] leading-tight sm:text-[36px] lg:text-[50px]">
             Join the DDOmics Lab
           </h2>
         </Reveal>
         <Reveal delay={100}>
-          <p className="mx-auto mt-8 max-w-3xl text-[22px] leading-relaxed font-semibold">
+          <p className="mx-auto mt-6 max-w-3xl text-[16px] leading-relaxed font-semibold sm:mt-8 sm:text-[19px] lg:text-[22px]">
             We're looking for postdocs, Ph.D. students and MSc project
             students to work on the human microbiome with us.
           </p>
         </Reveal>
         <Reveal delay={200}>
-          <p className="mx-auto mt-5 max-w-3xl text-[22px] leading-relaxed text-white/85">
+          <p className="mx-auto mt-4 max-w-3xl text-[16px] leading-relaxed text-white/85 sm:mt-5 sm:text-[19px] lg:text-[22px]">
             If you're motivated by questions in microbiome genomics,
             metabolomics or computational biology, we'd like to hear from
             you.

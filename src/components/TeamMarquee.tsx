@@ -21,7 +21,7 @@ export function TeamMarquee() {
   );
 
   return (
-    <div className="grid w-full grid-cols-2 gap-6 px-6 sm:grid-cols-3 lg:grid-cols-5 lg:gap-8 lg:px-10">
+    <div className="grid w-full grid-cols-1 gap-6 px-6 min-[420px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 lg:gap-8 lg:px-10">
       {items.map((p) => (
         <PersonCard key={p.slug} p={p} />
       ))}

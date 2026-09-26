@@ -71,7 +71,7 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10">
             <div aria-hidden="true" className="hidden md:block" />
             <Reveal delay={200}>
-              <p className="text-justify text-[21.7px] leading-relaxed text-muted-foreground">
+              <p className="text-justify text-[16px] leading-relaxed text-muted-foreground sm:text-[18px] lg:text-[21.7px]">
                 Human body harbors microbial cells in 1:1 proportion to human
                 cells and these microbes are involved in host activities
                 including metabolism, immune modulation and production of
@@ -83,7 +83,7 @@ function Home() {
           </div>
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:mt-20">
             <Reveal delay={280}>
-              <p className="text-justify text-[21.7px] leading-relaxed text-muted-foreground">
+              <p className="text-justify text-[16px] leading-relaxed text-muted-foreground sm:text-[18px] lg:text-[21.7px]">
                 In the DDOmics Lab, we study microbial community structure
                 and function in human health and diseases using classic
                 microbiology techniques, next generation sequencing and
