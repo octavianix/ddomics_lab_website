@@ -15,9 +15,10 @@ const IMAGES = [
 ];
 
 // Circular photo + card for each of the lab's three working methods.
-// Card is fixed at 424 x 544.88 with 25.437px padding on every side,
-// matching the reference "Themes in our work" layout; the 316px round
-// portrait overlaps the top of the card, on a solid navy banner.
+// Card caps at 424 x 544.88 with 25.437px padding at desktop width
+// (matching the reference "Themes in our work" layout); both shrink on
+// smaller screens so nothing overflows a narrow viewport. The circle
+// overlaps the top of its card, on a solid navy banner.
 export function ThemesSection() {
   return (
     <section className="border-b border-border bg-[#13233E] text-white">
@@ -35,18 +36,18 @@ export function ThemesSection() {
               delay={i * 100}
               className="flex w-[424px] max-w-full flex-col items-center text-center"
             >
-              <div className="fluid-overlay-navy relative z-10 -mb-16 h-[316px] w-[316px] shrink-0 overflow-hidden rounded-full ring-1 ring-white/20">
+              <div className="fluid-overlay-navy relative z-10 -mb-8 h-[180px] w-[180px] shrink-0 overflow-hidden rounded-full ring-1 ring-white/20 sm:-mb-12 sm:h-[240px] sm:w-[240px] lg:-mb-16 lg:h-[316px] lg:w-[316px]">
                 <img
                   src={IMAGES[i]}
                   alt=""
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div className="flex h-[544.88px] w-[424px] max-w-full flex-col bg-card p-[25.437px] pt-[89px] text-foreground">
-                <h3 className="display-title my-10 text-[30px] leading-snug uppercase">
+              <div className="flex min-h-[380px] w-[424px] max-w-full flex-col bg-card p-5 pt-14 text-foreground sm:min-h-[460px] sm:p-6 sm:pt-20 lg:min-h-[544.88px] lg:p-[25.437px] lg:pt-[89px]">
+                <h3 className="display-title my-6 text-[22px] leading-snug uppercase sm:my-8 sm:text-[26px] lg:my-10 lg:text-[30px]">
                   <span className="bg-primary/15 px-1">{LABELS[i]}</span>
                 </h3>
-                <p className="mt-5 text-[22px] leading-relaxed text-muted-foreground">
+                <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground sm:text-[18px] lg:mt-5 lg:text-[22px]">
                   {m.body}
                 </p>
               </div>
