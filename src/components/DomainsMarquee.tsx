@@ -13,7 +13,7 @@ export function DomainsMarquee() {
             key={`${t.slug}-${i}`}
             to="/research/$trackSlug"
             params={{ trackSlug: t.slug }}
-            className="lift-card sheen group flex h-[647.219px] w-[377.828px] shrink-0 flex-col overflow-hidden border border-border bg-card"
+            className="lift-card sheen group flex h-[377px] w-[220px] shrink-0 flex-col overflow-hidden border border-border bg-card sm:h-[513px] sm:w-[300px] lg:h-[647.219px] lg:w-[377.828px]"
           >
             <div className="art-tile fluid-overlay aspect-[3/2] w-full shrink-0 overflow-hidden">
               <img
@@ -23,7 +23,7 @@ export function DomainsMarquee() {
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
-            <div className="flex flex-1 flex-col p-7">
+            <div className="flex flex-1 flex-col p-5 sm:p-6 lg:p-7">
               <h3 className="display-title text-xl leading-snug transition-colors group-hover:text-primary">
                 {t.title}
               </h3>
