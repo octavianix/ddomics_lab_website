@@ -129,16 +129,16 @@ export const marqueeWords = [
 
 export const methods = [
   {
-    title: "We use classic microbiology",
-    body: "Culture-based isolation and characterization ground our sequencing data in living, testable organisms — from gut anaerobes to potential probiotic strains.",
+    title: "We isolate and characterize gut microbes",
+    body: "From strict anaerobes to candidate probiotic strains, culture-based isolation grounds every sequencing result in a living, testable organism. Our goal is to carry these isolates from bench to clinic as enterotype-specific probiotics.",
   },
   {
-    title: "We use next-generation sequencing",
-    body: "Targeted amplicon and metagenomic sequencing let us map community structure across thousands of individuals and dozens of endogamous populations.",
+    title: "We sequence across Indian populations",
+    body: "Targeted amplicon and shotgun metagenomic sequencing let us map gut microbial diversity across more than 4,000 individuals from 17 endogamous populations. Our goal is to build the country's first population-scale reference map of a healthy human microbiome.",
   },
   {
-    title: "We integrate multi-omics data",
-    body: "Genomic, metabolomic, and dietary datasets are combined to connect microbiome signatures to real health and disease outcomes.",
+    title: "We integrate multi-omics data with disease",
+    body: "Genomic, metabolomic, and clinical datasets are combined to connect specific microbiome signatures to real outcomes — from gluten-spectrum disorders and the gut-brain axis to maternal and infant health. Our goal is to turn those signatures into markers clinicians can act on.",
   },
 ];
 
