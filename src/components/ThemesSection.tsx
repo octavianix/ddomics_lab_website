@@ -1,17 +1,18 @@
 import { methods } from "@/lib/lab-data";
 import { Reveal } from "@/components/Reveal";
-import facilityAnaerobicWorkstation from "@/assets/facilities/anaerobic-workstation.jpg";
-import facilityMiseq from "@/assets/facilities/miseq.jpg";
-import artData from "@/assets/art-data.jpg";
+import themeCultureIsolation from "@/assets/themes/theme-culture-isolation.jpg";
+import themePopulationGenomics from "@/assets/themes/theme-population-genomics.png";
+import themeMultiomicsDisease from "@/assets/themes/theme-multiomics-disease.jpg";
 
 // Short card labels, paired by index with `methods` in lab-data.ts.
 const LABELS = ["Culture & Isolation", "Population Genomics", "Multi-Omics & Disease"];
 
-// Real lab photos, already used elsewhere on the site (Facilities page /
-// art assets) — reused here since they genuinely match each theme:
-// the lab's own anaerobic workstation, its MiSeq sequencer, and a
-// data/bioinformatics visual for the multi-omics theme.
-const IMAGES = [facilityAnaerobicWorkstation, facilityMiseq, artData];
+// Theme circle photos, supplied directly for these three themes.
+const IMAGES = [
+  themeCultureIsolation,
+  themePopulationGenomics,
+  themeMultiomicsDisease,
+];
 
 // Circular photo + card for each of the lab's three working methods.
 // Card is fixed at 424 x 544.88 with 25.437px padding on every side,
