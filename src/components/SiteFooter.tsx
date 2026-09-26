@@ -13,7 +13,7 @@ export function SiteFooter() {
                 Contact
               </p>
               <p className="text-[22.0028px] leading-relaxed font-bold text-white">
-                Dr. Dhiraj S. Dhotre, Scientist 'E'
+                Dr. Dhiraj P. Dhotre, Scientist 'E'
               </p>
               <p className="mt-5 text-[22.0028px] leading-relaxed">
                 Lab 3, Old Building
