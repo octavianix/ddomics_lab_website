@@ -17,7 +17,7 @@ function initials(name: string) {
 export function PersonCard({ p }: { p: Person }) {
   const card = (
     <>
-      <div className="relative flex aspect-square w-36 items-center justify-center overflow-hidden rounded-full bg-muted ring-1 ring-silver/30 transition-all duration-500 group-hover:ring-primary fluid-overlay">
+      <div className="relative flex aspect-square w-28 items-center justify-center overflow-hidden rounded-full bg-muted ring-1 ring-silver/30 transition-all duration-500 group-hover:ring-primary fluid-overlay sm:w-32 lg:w-36">
         {p.photo ? (
           <ProtectedImage
             src={p.photo}
@@ -39,9 +39,9 @@ export function PersonCard({ p }: { p: Person }) {
     </>
   );
   const cls =
-    "lift-card sheen group flex h-full flex-col items-center gap-5 border border-border bg-card p-8 text-center";
+    "lift-card sheen group flex h-full flex-col items-center gap-5 border border-border bg-card p-5 text-center sm:p-6 lg:p-8";
   const staticCls =
-    "flex h-full cursor-default flex-col items-center gap-5 border border-border bg-card p-8 text-center";
+    "flex h-full cursor-default flex-col items-center gap-5 border border-border bg-card p-5 text-center sm:p-6 lg:p-8";
   const viewProfile = (
     <span className="eyebrow text-muted-foreground opacity-0 transition-opacity duration-500 group-hover:opacity-100">
       View profile →
