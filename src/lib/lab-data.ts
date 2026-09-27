@@ -1185,7 +1185,7 @@ export const people: Person[] = [
   {
     slug: "harshada-pardeshi",
     name: "Harshada Pardeshi",
-    role: "Ph.D. Scholar",
+    role: "Ph.D. Student",
     group: "student",
     photo: photoHarshadaPardeshi,
     joinedYear: "2023",
@@ -1501,8 +1501,8 @@ export const people: Person[] = [
 
 export const alumni: Person[] = [
   {
-    slug: "dattatray-mongad",
-    name: "Dr. Dattatray S. Mongad",
+    slug: "-mongad",
+    name: "Dr. Dattatray Mongad",
     role: "Ph.D. Student",
     group: "alumni",
     photo: photoDattatrayMongad,
