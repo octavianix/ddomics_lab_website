@@ -77,16 +77,6 @@ export const navMenu: NavMenuItem[] = [
   {
     label: "Publications",
     to: "/publications",
-    menu: [
-      {
-        label: "Featured Publications",
-        to: "/publications/featured",
-      },
-      {
-        label: "All Publications",
-        to: "/publications/all",
-      },
-    ],
   },
   {
     label: "People",
