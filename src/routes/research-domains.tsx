@@ -12,7 +12,7 @@ export const Route = createFileRoute("/research/domains")({
       {
         name: "description",
         content:
-          "Five active research tracks: the Indian Human Microbiome Initiative, mother & infant microbiome, SARS-CoV-2 surveillance, gluten spectrum disorders and the gut–brain axis.",
+          "Research tracks: the Indian Human Microbiome Initiative, mother & infant microbiome, SARS-CoV-2 surveillance, gluten spectrum disorders and the gut–brain axis.",
       },
       {
         property: "og:title",
@@ -33,6 +33,7 @@ function ResearchDomainsPage() {
     <>
       <PageHero
         image={bgResearch}
+        eyebrow="Research Domains"
         focal="left"
         height="short"
         title={
@@ -41,7 +42,7 @@ function ResearchDomainsPage() {
             across populations, life stages and disease
           </>
         }
-        lede="Five tracks currently running in the lab, from population-scale cohorts to disease-focused multi-omics studies."
+        lede="Ongoing tracks in the lab, from population-scale cohorts to disease-focused multi-omics studies."
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
@@ -51,8 +52,8 @@ function ResearchDomainsPage() {
             key={t.code}
             className="grid grid-cols-1 gap-8 border-b border-border py-10 lg:grid-cols-12 lg:py-14"
           >
-            <div className="lg:col-span-4">
-              <div className="art-tile mb-6 aspect-[4/3] w-full overflow-hidden border border-border">
+            <div className={`lg:col-span-4 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+              <div className="art-tile fluid-overlay mb-6 aspect-[4/3] w-full overflow-hidden border border-border">
                 <img
                   src={t.image}
                   alt=""
@@ -67,8 +68,10 @@ function ResearchDomainsPage() {
                 {t.title}
               </h2>
             </div>
-            <div className="lg:col-span-8">
-              <p className="measure text-lg leading-relaxed">{t.summary}</p>
+            <div className={`lg:col-span-8 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+              <p className="measure text-justify text-lg leading-relaxed">
+                {t.summary}
+              </p>
 
               {t.video && (
                 <div className="mt-6 max-w-xl">
@@ -103,16 +106,6 @@ function ResearchDomainsPage() {
         ))}
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-        <Reveal>
-          <Link
-            to="/research"
-            className="eyebrow sheen inline-block border border-silver/50 px-6 py-3 tracking-[0.12em] uppercase transition-colors hover:border-silver"
-          >
-            ← Back to Research
-          </Link>
-        </Reveal>
-      </div>
     </>
   );
 }
