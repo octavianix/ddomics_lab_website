@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import {
@@ -34,20 +34,27 @@ export const Route = createFileRoute("/join")({
   component: JoinPage,
 });
 
-// Same "status + how to apply + contact" pattern per track, mirroring the
-// reference Join the Lab page's three-accordion layout.
+// `status` is the bold lead statement (matches the reference's <strong>
+// lead paragraph); `details` is the regular-weight follow-up.
 const roles = [
   {
     title: "Postdoctoral Scholars",
-    body: `We are not currently advertising a specific postdoctoral opening, but we are always happy to discuss project ideas and help postdocs secure independent fellowships in genomics, metabolomics, computational biology or anaerobic microbiology — including DBT-BioCARe, the SERB National Postdoctoral Fellowship, and DST Women Scientist schemes. Get in touch to discuss potential opportunities at ${lab.email}.`,
+    status:
+      "We are not currently advertising a specific postdoctoral opening; applications are considered on a rolling basis as funding allows.",
+    details: `We are always interested in discussing project ideas and helping postdocs secure independent fellowships in genomics, metabolomics, computational biology or anaerobic microbiology — including DBT-BioCARe, the SERB National Postdoctoral Fellowship, and DST Women Scientist schemes. Get in touch to discuss potential opportunities at ${lab.email}.`,
   },
   {
     title: "Ph.D. Students",
-    body: `Ph.D. admissions run through NCCS's doctoral programme, and most students enter on a CSIR-UGC NET JRF, DBT-JRF or ICMR fellowship. A lack of prior experience in microbiome research shouldn't discourage a genuinely motivated candidate — write in ahead of the interview cycle to discuss fit and current openings at ${lab.academics}.`,
+    status:
+      "We are not currently recruiting outside the regular NCCS admission cycle — but motivated students should still get in touch.",
+    details: `Ph.D. admissions run through NCCS's doctoral programme, and most students enter on a CSIR-UGC NET JRF, DBT-JRF or ICMR fellowship. A lack of prior experience in microbiome research shouldn't discourage a genuinely motivated candidate — write in ahead of the interview cycle to discuss fit and current openings at ${lab.academics}.`,
   },
   {
     title: "MSc / Project Students",
-    body: `We host a limited number of MSc dissertation and short-term project students each year, spanning wet-lab microbiology, sequencing library preparation and computational microbiome analysis. Write in directly with your CV and preferred timeline at ${lab.email}.`,
+    status:
+      "We host a limited number of MSc dissertation and short-term project students each year.",
+    details:
+      "Projects span wet-lab microbiology, sequencing library preparation and computational microbiome analysis. Write in directly with your CV and preferred timeline.",
   },
 ];
 
@@ -79,13 +86,39 @@ function JoinPage() {
                   {r.title}
                 </AccordionTrigger>
                 <AccordionContent className="pb-8 text-[16px] leading-relaxed text-muted-foreground sm:text-[18px] lg:pb-10 lg:text-[22px]">
-                  <p className="mt-4 lg:mt-5">{r.body}</p>
+                  <p className="mt-4 font-bold text-foreground lg:mt-5">
+                    {r.status}
+                  </p>
+                  <p className="mt-4 lg:mt-5">{r.details}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </Reveal>
       </div>
+
+      {/* Ready to apply? */}
+      <section className="bg-background">
+        <div className="mx-auto max-w-3xl px-6 pb-20 text-center lg:pb-28">
+          <Reveal>
+            <h2 className="display-title text-[32px] leading-tight sm:text-[40px] lg:text-[50px]">
+              Ready to apply?
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-[16px] leading-relaxed text-muted-foreground sm:text-[18px] lg:mt-5 lg:text-[22px]">
+              We're especially interested in mentees developing their own
+              independent project ideas. Explore our research program first,
+              then feel free to propose the direction of highest interest to
+              you.
+            </p>
+            <Link
+              to="/research"
+              className="mt-8 inline-block bg-[#F5FAFD] px-[20px] py-[20px] text-[20px] font-bold tracking-[0.04em] text-[#13233E] uppercase shadow-lg transition-opacity hover:opacity-90"
+            >
+              Explore our research program
+            </Link>
+          </Reveal>
+        </div>
+      </section>
 
       <section className="bg-ink text-ink-foreground">
         <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-32">
