@@ -67,14 +67,19 @@ function JoinPage() {
 
       <div className="mx-auto max-w-4xl px-6 py-14 lg:px-10 lg:py-20">
         <Reveal>
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion
+            type="single"
+            collapsible
+            defaultValue={roles[0]!.title}
+            className="w-full"
+          >
             {roles.map((r) => (
               <AccordionItem key={r.title} value={r.title}>
-                <AccordionTrigger className="display-title py-6 text-xl no-underline hover:no-underline lg:text-2xl">
+                <AccordionTrigger className="display-title my-6 py-0 text-[20px] leading-snug uppercase no-underline hover:no-underline hover:text-primary data-[state=open]:text-primary sm:my-8 sm:text-[24px] lg:my-10 lg:text-[30px]">
                   {r.title}
                 </AccordionTrigger>
-                <AccordionContent className="pb-8 text-base leading-relaxed text-muted-foreground">
-                  {r.body}
+                <AccordionContent className="pb-8 text-[16px] leading-relaxed text-muted-foreground sm:text-[18px] lg:pb-10 lg:text-[22px]">
+                  <p className="mt-4 lg:mt-5">{r.body}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}
