@@ -1185,11 +1185,11 @@ export const people: Person[] = [
   {
     slug: "harshada-pardeshi",
     name: "Harshada Pardeshi",
-    role: "PhD Scholar",
+    role: "Ph.D. Scholar",
     group: "student",
     photo: photoHarshadaPardeshi,
     joinedYear: "2023",
-    bio: "I am a PhD Scholar at the DDOmics Lab, National Centre for Cell Science, India, interested in the intersection of microbial genomics, neuroendocrinology, and host-microbiome interactions. My doctoral research focuses on the gut-brain axis, specifically the identification and characterisation of neuropeptide mimics produced by gut bacteria and their role in host physiology. A key focus of my work is a bacterial peptide with structural homology to a human satiety hormone, which I am characterising through molecular cloning, recombinant protein expression, and planned in vivo validation studies. Alongside this, I have developed a Snakemake-based automated pipeline for bacterial whole genome analysis and have worked on the genomics and resistome characterisation of extensively drug-resistant (XDR) Klebsiella pneumoniae clinical isolates.",
+    bio: "I am a Ph.D. Scholar at the DDOmics Lab, National Centre for Cell Science, India, interested in the intersection of microbial genomics, neuroendocrinology, and host-microbiome interactions. My doctoral research focuses on the gut-brain axis, specifically the identification and characterisation of neuropeptide mimics produced by gut bacteria and their role in host physiology. A key focus of my work is a bacterial peptide with structural homology to a human satiety hormone, which I am characterising through molecular cloning, recombinant protein expression, and planned in vivo validation studies. Alongside this, I have developed a Snakemake-based automated pipeline for bacterial whole genome analysis and have worked on the genomics and resistome characterisation of extensively drug-resistant (XDR) Klebsiella pneumoniae clinical isolates.",
     researchFocus:
       "The molecular dialogue of the gut-brain axis and how it modulates host physiology — specifically, lookalike peptides produced by gut bacteria that mimic human neuropeptides controlling hunger and satiety. Mapping these bacterial mimics aims to uncover novel pathways through which gut bacteria can influence appetite and host physiology.",
     education: [
@@ -1237,7 +1237,7 @@ export const people: Person[] = [
     group: "student",
     photo: photoMadhumitaBhattacharya,
     joinedYear: "2025",
-    bio: "Dr. Madhumita Bhattacharyya is a bioinformatician with research experience spanning microbiome analysis, network analysis, structural biology, lipidomics, proteomics and transcriptome analysis. She completed her PhD at CSIR-Indian Institute of Chemical Biology, working on host–pathogen interaction networks, phylogenetic analysis and structural studies of biomolecular complexes. Her postdoctoral and research experience at the Institute of Environmental Medicine, Technical University Munich/University of Augsburg focused on skin and stool microbiomes, atopic dermatitis, lipid–microbe interactions, antibiotic resistance, and development of computational tools and pipelines for microbiome analysis. She has contributed to the development of AnnotIEM, a species-level annotation approach for 16S gene-based microbial sequencing, and MicrobIEM, a user-friendly tool for microbiome data analysis. Her current work focuses on identifying niche-specific microbiome patterns in healthy skin and gut using computational and integrative approaches.",
+    bio: "Dr. Madhumita Bhattacharyya is a bioinformatician with research experience spanning microbiome analysis, network analysis, structural biology, lipidomics, proteomics and transcriptome analysis. She completed her Ph.D. at CSIR-Indian Institute of Chemical Biology, working on host–pathogen interaction networks, phylogenetic analysis and structural studies of biomolecular complexes. Her postdoctoral and research experience at the Institute of Environmental Medicine, Technical University Munich/University of Augsburg focused on skin and stool microbiomes, atopic dermatitis, lipid–microbe interactions, antibiotic resistance, and development of computational tools and pipelines for microbiome analysis. She has contributed to the development of AnnotIEM, a species-level annotation approach for 16S gene-based microbial sequencing, and MicrobIEM, a user-friendly tool for microbiome data analysis. Her current work focuses on identifying niche-specific microbiome patterns in healthy skin and gut using computational and integrative approaches.",
     researchFocus:
       "Understanding the composition and functional characteristics of the human microbiome, particularly the skin and gut microbiomes — identifying niche-specific microbial communities in healthy individuals and their interactions with the host and environmental factors. Her work combines microbiome data analysis, bioinformatics, multi-omics approaches, and the development of computational tools for microbial profiling and species-level annotation.",
     education: [
@@ -1328,7 +1328,7 @@ export const people: Person[] = [
     joinedYear: "2018",
     researchFocus:
       "Human microbiome research spanning next-generation sequencing, mother–infant microbiome dynamics, microbial ecology, metagenomics, microbial genomics, microbial therapeutics and probiotics.",
-    bio: "I am a microbiome researcher interested in understanding the human body as a dynamic ecosystem in which microbes, host physiology, diet, and metabolites continuously interact to shape health across the human lifespan. My work brings together microbiology, metagenomics, nutrition, physiology, and microbial ecology to study the human microbiome from its earliest beginnings to its complex dynamics in adulthood, and ultimately to explore how these microbial ecosystems can be translated into therapeutic and nutritional applications. As part of my PhD research, I investigate mother–infant microbial dynamics, with a particular focus on the potential entero-mammary pathway and other routes of early microbial acquisition. Breast milk is both a nutritional resource and a complex biological interface between mother and infant, carrying microbes, metabolites, and bioactive components that may influence the establishment of the infant gut ecosystem. I study these interactions across mother, breast milk, and infant compartments to understand how microbial communities are transferred, assembled, and functionally shaped during early life. Apart from this, I have been closely involved in the Indian Human Microbiome Initiative (IHMI), a flagship Government of India program, from its sampling phase through large scale microbiome data generation and analysis across diverse Indian populations. My broader work spans both culture-independent and culture-dependent approaches, including next-generation sequencing, metagenomics, microbial community analysis, anaerobic microbial isolation and cultivation, genomic characterization, and the development and application of potential probiotics.",
+    bio: "I am a microbiome researcher interested in understanding the human body as a dynamic ecosystem in which microbes, host physiology, diet, and metabolites continuously interact to shape health across the human lifespan. My work brings together microbiology, metagenomics, nutrition, physiology, and microbial ecology to study the human microbiome from its earliest beginnings to its complex dynamics in adulthood, and ultimately to explore how these microbial ecosystems can be translated into therapeutic and nutritional applications. As part of my Ph.D. research, I investigate mother–infant microbial dynamics, with a particular focus on the potential entero-mammary pathway and other routes of early microbial acquisition. Breast milk is both a nutritional resource and a complex biological interface between mother and infant, carrying microbes, metabolites, and bioactive components that may influence the establishment of the infant gut ecosystem. I study these interactions across mother, breast milk, and infant compartments to understand how microbial communities are transferred, assembled, and functionally shaped during early life. Apart from this, I have been closely involved in the Indian Human Microbiome Initiative (IHMI), a flagship Government of India program, from its sampling phase through large scale microbiome data generation and analysis across diverse Indian populations. My broader work spans both culture-independent and culture-dependent approaches, including next-generation sequencing, metagenomics, microbial community analysis, anaerobic microbial isolation and cultivation, genomic characterization, and the development and application of potential probiotics.",
     education: [
       {
         degree: "M.Sc. Microbiology",
@@ -1364,7 +1364,7 @@ export const people: Person[] = [
   {
     slug: "puja-ghosh",
     name: "Puja Ghosh",
-    role: "UGC-SRF / PhD Student",
+    role: "UGC-SRF / Ph.D. Student",
     group: "student",
     photo: photoPujaGhosh,
     joinedYear: "2022",
@@ -1425,7 +1425,7 @@ export const people: Person[] = [
     ],
     experience: [
       {
-        role: "PhD Scholar",
+        role: "Ph.D. Scholar",
         place: "DDOmics Lab, NCCS, Pune",
         period: "Aug 2026 – present",
       },
@@ -1477,11 +1477,26 @@ export const people: Person[] = [
   },
   {
     slug: "tanaya-ghanvatkar",
-    name: "Tanaya Ghanvatkar",
-    role: "Project Staff",
+    name: "Tanaya M. Ghanvatkar",
+    role: "Project Associate-II",
     group: "staff",
     photo: photoTanayaGhanvatkar,
-    noProfilePage: true,
+    joinedYear: "2023",
+    researchFocus:
+      "Human microbiome, microbial ecology, Sanger sequencing, next-generation sequencing (NGS), aerobic/anaerobic isolation, microbial characterization, and probiotics.",
+    bio: "Tanaya is a microbiologist, interested in studying microbial communities and their role in shaping human health. In the DDOmics Lab, alongside microbial culture-based work, she works with the Sanger sequencing facility, handling sequencing workflows and sample processing, and has also been trained in next-generation sequencing (NGS) techniques, with experience in the isolation, cultivation, and characterization of aerobic and anaerobic bacteria.",
+    education: [
+      {
+        degree: "M.Sc. Microbiology",
+        place: "Fergusson College (Autonomous), Pune",
+        period: "2023",
+      },
+    ],
+    outsideLab:
+      "Outside the lab, Tanaya enjoys painting and baking — because even off the clock, she can't resist a good culture and keeping gut microbes well-fed.",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/tanayaghanvatkar",
+    },
   },
 ];
 
