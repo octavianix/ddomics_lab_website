@@ -1,6 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 import bgJoin from "@/assets/bg-join.jpg";
 import { lab } from "@/lib/lab-data";
 import iconGmail from "@/assets/social/gmail.png";
@@ -28,18 +34,20 @@ export const Route = createFileRoute("/join")({
   component: JoinPage,
 });
 
+// Same "status + how to apply + contact" pattern per track, mirroring the
+// reference Join the Lab page's three-accordion layout.
 const roles = [
   {
-    title: "Postdoctoral researchers",
-    body: "We're looking for postdocs with a background in NGS, data analysis, metabolomics, anaerobic isolation, or animal studies. Write to the PI with a CV and a short statement of research interests.",
+    title: "Postdoctoral Scholars",
+    body: `We are not currently advertising a specific postdoctoral opening, but we are always happy to discuss project ideas and help postdocs secure independent fellowships in genomics, metabolomics, computational biology or anaerobic microbiology — including DBT-BioCARe, the SERB National Postdoctoral Fellowship, and DST Women Scientist schemes. Get in touch to discuss potential opportunities at ${lab.email}.`,
   },
   {
-    title: "Ph.D. students",
-    body: "Motivated students are welcome to apply through the NCCS doctoral programme. Candidates with CSIR/UGC-NET, DBT-JRF, ICMR or equivalent fellowships are encouraged to get in touch before the interview cycle.",
+    title: "Ph.D. Students",
+    body: `Ph.D. admissions run through NCCS's doctoral programme, and most students enter on a CSIR-UGC NET JRF, DBT-JRF or ICMR fellowship. A lack of prior experience in microbiome research shouldn't discourage a genuinely motivated candidate — write in ahead of the interview cycle to discuss fit and current openings at ${lab.academics}.`,
   },
   {
-    title: "MSc project students",
-    body: "Students seeking a 6–12 month dissertation project can write in directly. Projects span wet-lab microbiology, sequencing library preparation and computational microbiome analysis.",
+    title: "MSc / Project Students",
+    body: `We host a limited number of MSc dissertation and short-term project students each year, spanning wet-lab microbiology, sequencing library preparation and computational microbiome analysis. Write in directly with your CV and preferred timeline at ${lab.email}.`,
   },
 ];
 
@@ -48,6 +56,7 @@ function JoinPage() {
     <>
       <PageHero
         image={bgJoin}
+        eyebrow="Join the Lab"
         focal="right"
         title={
           <>
@@ -56,21 +65,21 @@ function JoinPage() {
         }
       />
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        {roles.map((r, i) => (
-          <Reveal
-            as="section"
-            key={r.title}
-            className="grid grid-cols-1 gap-6 border-b border-border py-14 lg:grid-cols-12"
-          >
-            <div className="lg:col-span-4">
-              <h2 className="display-title text-2xl">{r.title}</h2>
-            </div>
-            <p className="leading-relaxed text-muted-foreground lg:col-span-8">
-              {r.body}
-            </p>
-          </Reveal>
-        ))}
+      <div className="mx-auto max-w-4xl px-6 py-14 lg:px-10 lg:py-20">
+        <Reveal>
+          <Accordion type="single" collapsible className="w-full">
+            {roles.map((r) => (
+              <AccordionItem key={r.title} value={r.title}>
+                <AccordionTrigger className="display-title py-6 text-xl no-underline hover:no-underline lg:text-2xl">
+                  {r.title}
+                </AccordionTrigger>
+                <AccordionContent className="pb-8 text-base leading-relaxed text-muted-foreground">
+                  {r.body}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </Reveal>
       </div>
 
       <section className="bg-ink text-ink-foreground">
