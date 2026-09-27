@@ -9,22 +9,22 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 lg:gap-24">
             <div>
-              <p className="display-title mb-5 text-[30.014px] font-bold text-primary">
+              <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
                 Contact
               </p>
-              <p className="text-[22.0028px] leading-relaxed font-bold text-white">
-                Dr. Dhiraj P. Dhotre, Scientist 'E'
+              <p className="text-[21.6752px] leading-relaxed font-bold text-white">
+                Dr. Dhiraj S. Dhotre, Scientist 'E'
               </p>
-              <p className="mt-5 text-[22.0028px] leading-relaxed">
+              <p className="mt-5 text-[21.6752px] leading-relaxed">
                 Lab 3, Old Building
               </p>
-              <p className="mt-5 text-[22.0028px] leading-relaxed">
+              <p className="mt-5 text-[21.6752px] leading-relaxed">
                 NCCS, SPPU Campus
               </p>
-              <p className="mt-5 text-[22.0028px] leading-relaxed">
+              <p className="mt-5 text-[21.6752px] leading-relaxed">
                 Pune 411007
               </p>
-              <p className="mt-5 text-[22.0028px] leading-relaxed">
+              <p className="mt-5 text-[21.6752px] leading-relaxed">
                 <a
                   href={`mailto:${lab.email}`}
                   className="inline-flex items-center gap-2 transition-colors hover:text-white"
@@ -40,11 +40,11 @@ export function SiteFooter() {
             </div>
 
             <div className="sm:col-span-2">
-              <p className="display-title mb-5 text-[30.014px] font-bold text-primary">
+              <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
                 Quick Links
               </p>
               <div className="flex items-start justify-between gap-16">
-                <ul className="space-y-5 text-[22.0028px]">
+                <ul className="space-y-5 text-[21.6752px]">
                   {navLinks.slice(0, 3).map((l) => (
                     <li key={l.to}>
                       <Link
@@ -56,7 +56,7 @@ export function SiteFooter() {
                     </li>
                   ))}
                 </ul>
-                <ul className="space-y-5 text-[22.0028px]">
+                <ul className="space-y-5 text-[21.6752px]">
                   {navLinks.slice(3).map((l) => (
                     <li key={l.to}>
                       <Link
@@ -88,14 +88,30 @@ export function SiteFooter() {
           </div>
 
         <div className="mt-14 border-t border-white/10 pt-10">
-          <p className="display-title mb-5 text-[30.014px] font-bold text-primary">
-            Funded By
-          </p>
-          <ul className="space-y-3 text-[22.0028px] leading-relaxed">
-            <li>Department of Biotechnology</li>
-            <li>Department of Science &amp; Technology</li>
-            <li>Science &amp; Engineering Research Board, New Delhi</li>
-          </ul>
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
+            <div>
+              <p className="display-title mb-5 text-[28.376px] font-bold text-primary">
+                Funded By
+              </p>
+              <ul className="space-y-3 text-[21.6752px] leading-relaxed">
+                <li>Department of Biotechnology</li>
+                <li>Department of Science &amp; Technology</li>
+                <li>Science &amp; Engineering Research Board, New Delhi</li>
+              </ul>
+            </div>
+
+            <div className="h-full min-h-[260px] w-full overflow-hidden border border-white/10">
+              <iframe
+                title="NCCS, SPPU Campus, Pune — location"
+                src="https://www.google.com/maps?q=National+Centre+for+Cell+Science,+Pune&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: 260 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
         </div>
 
         <hr className="my-10 border-primary/60" />
