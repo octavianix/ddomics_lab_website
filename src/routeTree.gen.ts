@@ -22,8 +22,6 @@ import { Route as NewsCareerNotificationsRouteImport } from './routes/news-caree
 import { Route as NewsAnnouncementsRouteImport } from './routes/news-announcements'
 import { Route as NewsMediaRouteImport } from './routes/news-media'
 import { Route as NewsTalksRouteImport } from './routes/news-talks'
-import { Route as PublicationsFeaturedRouteImport } from './routes/publications-featured'
-import { Route as PublicationsAllRouteImport } from './routes/publications-all'
 import { Route as ResearchFacilitiesRouteImport } from './routes/research-facilities'
 import { Route as ResearchDomainsRouteImport } from './routes/research-domains'
 import { Route as ResearchTrackRouteImport } from './routes/research-track'
@@ -93,16 +91,6 @@ const NewsTalksRoute = NewsTalksRouteImport.update({
   path: '/news/talks',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PublicationsFeaturedRoute = PublicationsFeaturedRouteImport.update({
-  id: '/publications/featured',
-  path: '/publications/featured',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PublicationsAllRoute = PublicationsAllRouteImport.update({
-  id: '/publications/all',
-  path: '/publications/all',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ResearchFacilitiesRoute = ResearchFacilitiesRouteImport.update({
   id: '/research/facilities',
   path: '/research/facilities',
@@ -133,8 +121,6 @@ export interface FileRoutesByFullPath {
   '/news/media': typeof NewsMediaRoute
   '/news/publications': typeof NewsPublicationsRoute
   '/news/talks': typeof NewsTalksRoute
-  '/publications/all': typeof PublicationsAllRoute
-  '/publications/featured': typeof PublicationsFeaturedRoute
   '/research/domains': typeof ResearchDomainsRoute
   '/research/facilities': typeof ResearchFacilitiesRoute
   '/research/$trackSlug': typeof ResearchTrackRoute
@@ -153,8 +139,6 @@ export interface FileRoutesByTo {
   '/news/media': typeof NewsMediaRoute
   '/news/publications': typeof NewsPublicationsRoute
   '/news/talks': typeof NewsTalksRoute
-  '/publications/all': typeof PublicationsAllRoute
-  '/publications/featured': typeof PublicationsFeaturedRoute
   '/research/domains': typeof ResearchDomainsRoute
   '/research/facilities': typeof ResearchFacilitiesRoute
   '/research/$trackSlug': typeof ResearchTrackRoute
@@ -174,8 +158,6 @@ export interface FileRoutesById {
   '/news/media': typeof NewsMediaRoute
   '/news/publications': typeof NewsPublicationsRoute
   '/news/talks': typeof NewsTalksRoute
-  '/publications/all': typeof PublicationsAllRoute
-  '/publications/featured': typeof PublicationsFeaturedRoute
   '/research/domains': typeof ResearchDomainsRoute
   '/research/facilities': typeof ResearchFacilitiesRoute
   '/research/$trackSlug': typeof ResearchTrackRoute
@@ -196,8 +178,6 @@ export interface FileRouteTypes {
     | '/news/media'
     | '/news/publications'
     | '/news/talks'
-    | '/publications/all'
-    | '/publications/featured'
     | '/research/domains'
     | '/research/facilities'
     | '/research/$trackSlug'
@@ -216,8 +196,6 @@ export interface FileRouteTypes {
     | '/news/media'
     | '/news/publications'
     | '/news/talks'
-    | '/publications/all'
-    | '/publications/featured'
     | '/research/domains'
     | '/research/facilities'
     | '/research/$trackSlug'
@@ -236,8 +214,6 @@ export interface FileRouteTypes {
     | '/news/media'
     | '/news/publications'
     | '/news/talks'
-    | '/publications/all'
-    | '/publications/featured'
     | '/research/domains'
     | '/research/facilities'
     | '/research/$trackSlug'
@@ -257,8 +233,6 @@ export interface RootRouteChildren {
   NewsMediaRoute: typeof NewsMediaRoute
   NewsPublicationsRoute: typeof NewsPublicationsRoute
   NewsTalksRoute: typeof NewsTalksRoute
-  PublicationsFeaturedRoute: typeof PublicationsFeaturedRoute
-  PublicationsAllRoute: typeof PublicationsAllRoute
   ResearchFacilitiesRoute: typeof ResearchFacilitiesRoute
   ResearchDomainsRoute: typeof ResearchDomainsRoute
   ResearchTrackRoute: typeof ResearchTrackRoute
@@ -357,20 +331,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NewsTalksRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/publications/all': {
-      id: '/publications/all'
-      path: '/publications/all'
-      fullPath: '/publications/all'
-      preLoaderRoute: typeof PublicationsAllRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/publications/featured': {
-      id: '/publications/featured'
-      path: '/publications/featured'
-      fullPath: '/publications/featured'
-      preLoaderRoute: typeof PublicationsFeaturedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/research/domains': {
       id: '/research/domains'
       path: '/research/domains'
@@ -409,8 +369,6 @@ const rootRouteChildren: RootRouteChildren = {
   NewsMediaRoute: NewsMediaRoute,
   NewsPublicationsRoute: NewsPublicationsRoute,
   NewsTalksRoute: NewsTalksRoute,
-  PublicationsFeaturedRoute: PublicationsFeaturedRoute,
-  PublicationsAllRoute: PublicationsAllRoute,
   ResearchFacilitiesRoute: ResearchFacilitiesRoute,
   ResearchDomainsRoute: ResearchDomainsRoute,
   ResearchTrackRoute: ResearchTrackRoute,
