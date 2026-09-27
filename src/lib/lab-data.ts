@@ -51,7 +51,7 @@ export const lab = {
 
 export const navLinks = [
   { to: "/", label: "Home" },
-  { to: "/research", label: "Research" },
+  { to: "/research/domains", label: "Research" },
   { to: "/publications", label: "Publications" },
   { to: "/people", label: "People" },
   { to: "/news", label: "News" },
@@ -68,7 +68,7 @@ export const navMenu: NavMenuItem[] = [
   { label: "Home", to: "/" },
   {
     label: "Research",
-    to: "/research",
+    to: "/research/domains",
     menu: [
       { label: "Facilities", to: "/research/facilities" },
       { label: "Research Domains", to: "/research/domains" },
@@ -103,7 +103,7 @@ export const stats = [
   { value: 4000, suffix: "+", label: "Individuals sequenced so far" },
   { value: 17, suffix: "", label: "Endogamous populations sampled" },
   { value: 20000, suffix: "", label: "Target cohort for phase II of IHMI" },
-  { value: 5, suffix: "", label: "Active research tracks" },
+  { value: 5, suffix: "", label: "Research domains" },
 ];
 
 export const marqueeWords = [
