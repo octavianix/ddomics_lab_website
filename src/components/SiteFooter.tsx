@@ -118,8 +118,7 @@ export function SiteFooter() {
 
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
           <p className="font-mono text-[12px] opacity-50">
-            © {new Date().getFullYear()} {lab.name}, NCCS Pune. All rights
-            reserved.
+            © {new Date().getFullYear()} {lab.name}, NCCS Pune.
           </p>
           <a
             href="https://github.com/oktavianos"
