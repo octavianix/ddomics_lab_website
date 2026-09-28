@@ -70,13 +70,13 @@ function Home() {
       {/* Mission paragraphs — each half-width, alternating sides */}
       <section className="bg-ink text-ink-foreground">
         <div className="mx-auto max-w-5xl px-6 pb-16 text-left lg:pb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10">
-            <Reveal delay={100} className="hidden self-center md:block">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
+            <Reveal delay={100} className="self-center">
               <img
                 src={microbiomeTeal}
                 alt="Illustration of the gut with microbes and the word Microbiome"
                 loading="lazy"
-                className="h-auto w-full"
+                className="mx-auto h-auto w-full max-w-md md:max-w-none"
               />
             </Reveal>
             <Reveal delay={200}>
@@ -90,7 +90,7 @@ function Home() {
               </p>
             </Reveal>
           </div>
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:mt-20">
+          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10 lg:mt-20">
             <Reveal delay={280}>
               <p className="text-justify text-[16px] leading-relaxed text-muted-foreground sm:text-[18px] lg:text-[21.7px]">
                 In the DDOmics Lab, we study microbial community structure
@@ -102,12 +102,12 @@ function Home() {
                 Gut-brain axis, and Surveillance of SARS-CoV-2.
               </p>
             </Reveal>
-            <Reveal delay={360} className="hidden self-center md:block">
+            <Reveal delay={360} className="self-center">
               <img
                 src={microbiomePink}
                 alt="Infographic of interesting facts about your microbiome"
                 loading="lazy"
-                className="h-auto w-full"
+                className="mx-auto h-auto w-full max-w-md md:max-w-none"
               />
             </Reveal>
           </div>
