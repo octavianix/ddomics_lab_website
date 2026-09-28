@@ -4,6 +4,8 @@ import { DomainsMarquee } from "@/components/DomainsMarquee";
 import { TeamMarquee } from "@/components/TeamMarquee";
 import { ThemesSection } from "@/components/ThemesSection";
 import { JoinCta } from "@/components/JoinCta";
+import microbiomeTeal from "@/assets/home/microbiome-teal.png";
+import microbiomePink from "@/assets/home/microbiome-pink.png";
 import heroBg from "@/assets/microbiome-heads.png";
 import logoBmgf from "@/assets/collaborators/bmgf.png";
 import logoDst from "@/assets/collaborators/dst.png";
@@ -69,7 +71,14 @@ function Home() {
       <section className="bg-ink text-ink-foreground">
         <div className="mx-auto max-w-5xl px-6 pb-16 text-left lg:pb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10">
-            <div aria-hidden="true" className="hidden md:block" />
+            <Reveal delay={100} className="hidden self-center md:block">
+              <img
+                src={microbiomeTeal}
+                alt="Illustration of the gut with microbes and the word Microbiome"
+                loading="lazy"
+                className="h-auto w-full"
+              />
+            </Reveal>
             <Reveal delay={200}>
               <p className="text-justify text-[16px] leading-relaxed text-muted-foreground sm:text-[18px] lg:text-[21.7px]">
                 Human body harbors microbial cells in 1:1 proportion to human
@@ -93,7 +102,14 @@ function Home() {
                 Gut-brain axis, and Surveillance of SARS-CoV-2.
               </p>
             </Reveal>
-            <div aria-hidden="true" className="hidden md:block" />
+            <Reveal delay={360} className="hidden self-center md:block">
+              <img
+                src={microbiomePink}
+                alt="Infographic of interesting facts about your microbiome"
+                loading="lazy"
+                className="h-auto w-full"
+              />
+            </Reveal>
           </div>
         </div>
       </section>
